@@ -215,6 +215,19 @@ div.row {
     font-weight: bold;
 }
 
+.link-dark {
+    color: #212529;
+}
+
+.profile-link {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.link-secondary {
+    color: #6c757d;
+}
+
 
 /**/
 
