@@ -130,7 +130,8 @@ body {
 
 .nasa-logo-col {
     /*text-align: right;*/
-    flex: 25% padding-right: 1rem;
+    flex: 25%;
+    padding-right: 1rem;
 }
 
 .body-container {
@@ -226,6 +227,11 @@ div.row {
 
 .link-secondary {
     color: #6c757d;
+}
+
+.link-white {
+    color: white;
+    text-decoration: underline;
 }
 
 
