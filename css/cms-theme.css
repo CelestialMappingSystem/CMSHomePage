@@ -79,8 +79,6 @@ body {
     /*height: 55vh;*/
 }
 
-.carousel-item {}
-
 .jumbotron::after {
     clear: both;
 }
