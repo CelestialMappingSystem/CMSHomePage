@@ -87,8 +87,6 @@ body {
 
 .banner {
     background-color: black;
-    /* height: 20rem;*/
-    /* background: transparent;*/
 }
 
 .banner-wrapper::after {
@@ -97,12 +95,19 @@ body {
     content: "";
 }
 
-.banner-logos {
+/* .banner-logos {
     /*margin-top: 2rem;*/
     /*padding-top: 0px;*/
     /*margin-left: 1rem;*/
     /*margin-right: 1rem;*/
-    /*margin: auto;*/
+    /*margin: auto;} */
+
+.tablinks{
+    font-weight: bolder;
+}
+
+textarea{
+    resize: horizontal;
 }
 
 .cms-logo {
@@ -111,7 +116,7 @@ body {
 }
 
 .cms-logo-col {
-    flex: 25%;
+    /* flex: 5%; */
     padding: 1rem;
 }
 
@@ -130,8 +135,42 @@ body {
 
 .nasa-logo-col {
     text-align: right;
-    flex: 25%;
+    /* flex: 5%; */
     padding-right: 1rem;
+}
+
+.nasa-logo-col-footer {
+    text-align: right;
+    flex: 5%;
+    padding-right: 1rem;
+}
+
+.tab {
+    text-align: center;
+    flex: 25%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    color: white;
+}
+
+.tab button{
+    background-color: inherit;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    color:white !important;
+    padding-left: 2rem;
+    padding-right:2rem;
+}
+
+.tab button:hover {
+    text-decoration: underline;
+}
+  
+  /* Create an active/current tablink class */
+.tab button.active {
+    text-decoration: underline;
 }
 
 .body-container {
