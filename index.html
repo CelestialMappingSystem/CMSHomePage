@@ -6,18 +6,11 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="NASA Celestial Mapping System for 3D visualization of the lunar surface using the Java platform.">
-
     <link rel="stylesheet" type="text/css" href="css/bootstrap_4_6_0_dist/css/bootstrap.css">
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/bootstrap_4_6_0_dist/js/bootstrap.bundle.js"></script>
-
     <link rel="stylesheet" type="text/css" href="css/cms-theme.css">
-
     <script type="text/javascript" src="./js/carousel_img_modal.js"></script>
-
-
-
     <title>The Celestial Mapping System</title>
 </head>
 
@@ -27,19 +20,20 @@
             <div class="row banner-logos">
                 <div class="cms-logo-col">
 					<a href="https://celestial.arc.nasa.gov/" target="_blank">
-						<img src="img/cms-logo.png" alt="CMS Home Page">
+						<img id=cms-main-logo src="img/cms-logo-high-res.png" alt="CMS Home Page">
 					</a>					
 				</div>
                 <div class="tab" style="font-size: 23px;">
-                    <button id="aboutButton" class="tablinks" onclick="openTab(event,'about')">Home</button>
-                    <button class="tablinks" onclick="openTab(event,'video')">Video Demonstration</button>
-                    <button class="tablinks" onclick="openTab(event,'team')">Meet the Team</button>
-                    <button class="tablinks" onclick="openTab(event,'publication')">Publications</button>
-                    <button class="tablinks" onclick="openTab(event,'contact')">Contact Us</button>
+                    <a id="aboutButton" class="tablinks" onclick="openTab(event,'about')">Home</a>
+                    <a class="tablinks" onclick="openTab(event,'video')">Video Demonstration</a>
+                    <a class="tablinks" onclick="openTab(event,'team')">Team</a>
+                    <a class="tablinks" onclick="openTab(event,'publication')">Publications</a>
+                    <a class="tablinks" onclick="openTab(event,'gallery')">Gallery</a>
+                    <a class="tablinks" onclick="openTab(event,'contact')">Contact Us</a>
                 </div>
                 <div class="nasa-logo-col">
 					<a href="https://www.nasa.gov/" target="_blank">
-						<img src="img/nasa-meatball-logo.png" alt="NASA Home Page">
+						<img id=nasa-meatball-logo src="img/nasa-meatball-logo-high-res.png" alt="NASA Home Page">
 					</a>
 				</div>
             </div>
