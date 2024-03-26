@@ -7,23 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="NASA Celestial Mapping System for 3D visualization of the lunar surface using the Java platform.">
     <link rel="stylesheet" type="text/css" href="css/bootstrap_4_6_0_dist/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/cms-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/bootstrap_4_6_0_dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/cms-theme.css">
     <script type="text/javascript" src="./js/carousel_img_modal.js"></script>
     <title>The Celestial Mapping System</title>
 </head>
 
 <body>
     <div class="wrapper banner-wrapper">
-        <div class="banner" style="overflow: hidden; position: fixed;top: 0;width: 100%;z-index: 20;">
+        <div class="banner" style="overflow: hidden; position: fixed; top: 0; width: 100%; z-index: 20;">
             <div class="row banner-logos">
                 <div class="cms-logo-col">
-					<a href="https://celestial.arc.nasa.gov/" target="_blank">
+					<a href="https://celestial.arc.nasa.gov/">
 						<img id=cms-main-logo src="img/cms-logo-high-res.png" alt="CMS Home Page">
 					</a>					
 				</div>
-                <div class="tab" style="font-size: 23px;">
+                <div class="tab" style="font-size: 25px;">
                     <a id="aboutButton" class="tablinks" onclick="openTab(event,'about')">Home</a>
                     <a class="tablinks" onclick="openTab(event,'video')">Video Demonstration</a>
                     <a class="tablinks" onclick="openTab(event,'team')">Team</a>
@@ -41,17 +45,15 @@
     </div>
 
     <!-- About Complete -->
-    <div id="about" class="tabcontent" style="display:block; margin-top:110px;">
+    <div id="about" class="tabcontent" style="display:block; margin-top:80px;">
         <div class="wrapper banner-wrapper">
             <div class="banner">
-                <div class="cms-banner-text">
-                    <br>
-                    <h1>Celestial Mapping System</h1>
-                    <h2>NASA Ames Research Center</h2>
-                </div>
-           
                 <div class="container" id="banner-carousel">
-                    
+                    <div class="cms-banner-text">
+                        <br>
+                        <h1>Celestial Mapping System</h1>
+                        <h2>NASA Ames Research Center</h2>
+                    </div>
                     <!-- Carousel should pop out a gallery view of pictures -->
                     <div id="carouselSlides" data-toggle="modal" data-target="#exampleModal" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -67,23 +69,23 @@
                             <li data-target="#carouselSlides" data-slide-to="9"></li>
                             <li data-target="#carouselSlides" data-slide-to="10"></li>
                             <li data-target="#carouselSlides" data-slide-to="11"></li>
-                            <li data-target="#carouselSlides" data-slide-to="12"></li>
+                            <!-- <li data-target="#carouselSlides" data-slide-to="12"></li>
                             <li data-target="#carouselSlides" data-slide-to="13"></li>
-                            <li data-target="#carouselSlides" data-slide-to="14"></li>
+                            <li data-target="#carouselSlides" data-slide-to="14"></li> -->
                         </ol>
                         <div class="carousel-inner">
                             <div data-slide-number="0" class="carousel-item active fancybox">
                                 <img class="c-img d-block w-100" src="img/blue005.png" alt="First slide - LOLA Blue Steel">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5 class="invisible">LOLA Color Shaded Relief Blue Steel</h5>
-                                    <p class="invisible">3D terrain with LOLA Color Shaded Relief Blue Steel derived from LRO elevation data without vertical exaggeration.</p>
+                                    <h5>LOLA Color Shaded Relief Blue Steel</h5>
+                                    <p>3D terrain with LOLA Color Shaded Relief Blue Steel derived from LRO elevation data without vertical exaggeration.</p>
                                 </div>
                             </div>
                             <div data-slide-number="1" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/latlongrat.PNG" alt="Second slide">
+                                <img class="c-img d-block w-100" src="img/venus1.PNG" alt="Eighth slide - 3D Projection of Venus">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>Lat-Lon Graticule conforming to Mountains</h5>
-                                    <p>Path conforming Lat-Lon graticules provide accurate analysis of the lunar surface.</p>
+                                    <h5>3D Projection of Venus</h5>
+                                    <p>CMS has the potential to project data from any celestial body onto a 3D Globe Object.</p>
                                 </div>
                             </div>
                             <div data-slide-number="2" class="carousel-item fancybox">
@@ -94,90 +96,89 @@
                                 </div>
                             </div>
                             <div data-slide-number="3" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/ApolloMissions.PNG" alt="Fourth slide - Apollo Landing sites with annotations on the lunar surface showing location and mission badges.">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
-                                    <h5>Apollo Mission Landing Sites</h5>
-                                    <p>These "balloon" annotations show various Apollo landing sites along with their respective mission dates and badges.</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="4" class="carousel-item fancybox">
                                 <img class="c-img d-block w-100" src="img/GARS.PNG" alt="Fifth slide - GARS graticule over Copernicus Crater">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>GARS graticule over Copernicus Crater</h5>
                                     <p>Path conforming Lat-Lon graticules provide accurate analysis of the lunar surface.</p>
                                 </div>
                             </div>
-                            <div data-slide-number="5" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100 object-position-top" src="img/UnifiedGeologicMap.png" alt="Sixth slide - 2020 Unified Geologic Map of the Moon">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
-                                    <h5>2020 Unified Geologic Map of the Moon</h5>
-                                    <p>One of the newest data sets in CMS, the 2020 Unified Geologic Map of the Moon is a seamless renovation of six previous maps combined with data from multiple space agencies.</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="6" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/stereo2.PNG" alt="Seventh slide - Stereoscopic View of a mountainous crater">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Stereoscopic View of a mountainous crater</h5>
-                                    <p>Stereo view using Red and Blue overlays brings out craters and prominent features</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="7" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/venus1.PNG" alt="Eighth slide - 3D Projection of Venus">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
-                                    <h5>3D Projection of Venus</h5>
-                                    <p>CMS has the potential to project data from any celestial body onto a 3D Globe Object.</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="8" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/moon4.PNG" alt="Ninth slide - LOLA Color Shaded Relief Map">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
-                                    <h5>LOLA Color Shaded Relief Map</h5>
-                                    <p>Maps from various missions can be projected using CMS, such as this LOLA Color Shaded Relief Map (388m/px)</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="9" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/profiler2.PNG" alt="Tenth slide - Terrain Elevation Profile Tool">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Terrain Elevation Profile Tool</h5>
-                                    <p>Analysis of the the elevation profile of Mare Orientale​.</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="10" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/sp.PNG" alt="Eleventh slide - South Pole LOLA Color Shaded Relief Projection">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
-                                    <h5>South Pole LOLA Color Shaded Relief Projection</h5>
-                                    <p>Projection of the Lunar South Pole derived from LRO elevation data ​using the LOLA Color Shaded Relief map layer</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="11" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/placemarks.PNG" alt="Twelfth slide - USGS Lunar Placemarks">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
-                                    <h5>USGS Lunar Placemarks</h5>
-                                    <p>CMS contains Shapefiles from USGS that display over 7000 lunar landmarks</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="12" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/mars3.PNG" alt="Thirteenth slide - 3D Projection of Mars">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>3D Projection of Mars</h5>
-                                    <p>CMS has the potential to project data from any celestial body onto a 3D Globe Object.</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="13" class="carousel-item fancybox">
+                            <div data-slide-number="4" class="carousel-item fancybox">
                                 <img class="c-img d-block w-100" src="img/titancms.PNG" alt="Fourteenth slide - 3D Projection of Titan">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>3D Projection of Titan</h5>
                                     <p>CMS has the potential to project data from any celestial body onto a 3D Globe Object.</p>
                                 </div>
                             </div>
-                            <div data-slide-number="14" class="carousel-item fancybox">
+                            <div data-slide-number="5" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/stereo2.PNG" alt="Seventh slide - Stereoscopic View of a mountainous crater">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Stereoscopic View of a mountainous crater</h5>
+                                    <p>Stereo view using Red and Blue overlays brings out craters and prominent features</p>
+                                </div>
+                            </div>
+                            <div data-slide-number="6" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/moon4.PNG" alt="Ninth slide - LOLA Color Shaded Relief Map">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>LOLA Color Shaded Relief Map</h5>
+                                    <p>Maps from various missions can be projected using CMS, such as this LOLA Color Shaded Relief Map (388m/px)</p>
+                                </div>
+                            </div>
+                            <div data-slide-number="7" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/latlongrat.PNG" alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Lat-Lon Graticule conforming to Mountains</h5>
+                                    <p>Path conforming Lat-Lon graticules provide accurate analysis of the lunar surface.</p>
+                                </div>
+                            </div>
+                            <div data-slide-number="8" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/sp.PNG" alt="Eleventh slide - South Pole LOLA Color Shaded Relief Projection">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>South Pole LOLA Color Shaded Relief Projection</h5>
+                                    <p>Projection of the Lunar South Pole derived from LRO elevation data ​using the LOLA Color Shaded Relief map layer</p>
+                                </div>
+                            </div>
+                            <div data-slide-number="9" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/placemarks.PNG" alt="Twelfth slide - USGS Lunar Placemarks">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>USGS Lunar Placemarks</h5>
+                                    <p>CMS contains Shapefiles from USGS that display over 7000 lunar landmarks</p>
+                                </div>
+                            </div>
+                            <div data-slide-number="10" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/mars3.PNG" alt="Thirteenth slide - 3D Projection of Mars">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>3D Projection of Mars</h5>
+                                    <p>CMS has the potential to project data from any celestial body onto a 3D Globe Object.</p>
+                                </div>
+                            </div>
+                            <div data-slide-number="11" class="carousel-item fancybox">
                                 <img class="c-img d-block w-100" src="img/moonshading.png" alt="Fifthteenth slide - Moon Shading Simulation">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
+                                <div class="carousel-caption d-none d-md-block">
                                     <h5>Moon Shading Simulation</h5>
                                     <p>Users can enter a start and end date and simulate the passage of the sun across the moon's surface.</p>
                                 </div>
                             </div>
-        
+                            <!-- <div data-slide-number="12" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/profiler2.PNG" alt="Tenth slide - Terrain Elevation Profile Tool">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Terrain Elevation Profile Tool</h5>
+                                    <p>Analysis of the the elevation profile of Mare Orientale​.</p>
+                                </div>
+                            </div> -->
+                            <!-- <div data-slide-number="13" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100 object-position-top" src="img/UnifiedGeologicMap.png" alt="Sixth slide - 2020 Unified Geologic Map of the Moon">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>2020 Unified Geologic Map of the Moon</h5>
+                                    <p>One of the newest data sets in CMS, the 2020 Unified Geologic Map of the Moon is a seamless renovation of six previous maps combined with data from multiple space agencies.</p>
+                                </div>
+                            </div> -->
+                            <!-- <div data-slide-number="14" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/ApolloMissions.PNG" alt="Fourth slide - Apollo Landing sites with annotations on the lunar surface showing location and mission badges.">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Apollo Mission Landing Sites</h5>
+                                    <p>These "balloon" annotations show various Apollo landing sites along with their respective mission dates and badges.</p>
+                                </div>
+                            </div> -->
                         </div>
         
                         <a class="carousel-control-prev" href="#carouselSlides" role="button" data-slide="prev">
@@ -708,28 +709,23 @@
             </div>
         </div>
     </div>
-    
-    <div class="wrapper banner-wrapper">
-        <div class="page-end-spacer">
-            <div class="banner end-banner">
-                <div class="row more-left-right-padding banner-logos ">
-                    <div class="cms-logo-col">
-                        <img class="cms-logo" src="img/cms-logo.png">
-                    </div>
-                    <div class="nasa-logo-col-footer">
-                        <img class="cms-logo" src="img/nasa-meatball-logo.png">
-                    </div>
-                </div>
-                <div class="text-center nasa-footer-links">
-                    <h4>
-                        <a class="link-white" href="https://www.nasa.gov/about/highlights/HP_Privacy.html">Privacy</a>
-                    </h4>
-                </div>
 
+    <footer class="wrapper banner-wrapper footer">
+        <div class="banner" style="overflow: hidden; bottom: 0; width: 100%;">
+            <div class="row banner-logos footer-items">
+                <div class="cms-logo-col">
+					<img id=cms-main-logo src="img/cms-logo-high-res.png" alt="CMS Home Page">
+				</div>
+                <div class="tab" style="font-size: 23px;">
+                    <a class="tablinks" href="https://www.nasa.gov/about/highlights/HP_Privacy.html" target="_blank" >Privacy</a>
+                    <a class="tablinks" href="https://www.nasa.gov/accessibility/" target="_blank">Accessibility</a>
+                </div>
+                <div class="nasa-logo-col">
+                    <img id=nasa-meatball-logo src="img/nasa-meatball-logo-high-res.png" alt="NASA Home Page">
+				</div>
             </div>
         </div>
-
-    </div>
+    </footer>
 
     <!-- Javascript for handling tab change -->
     <script>
