@@ -15,6 +15,11 @@ h2 {
     font-style: normal;
 }
 
+h5 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'Public Sans Web, sans-serif';
     font-style: normal;
@@ -181,6 +186,20 @@ textarea{
     height: 35rem;
 }
 
+.overview-text{
+    page-break-inside: avoid;
+    padding-bottom: 10px;
+}
+
+.title {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    margin-left: -10px;
+}
+
 #email-us {
     font-weight: 600;
     letter-spacing: .1rem;
@@ -193,12 +212,6 @@ textarea{
 .modal-dialog {
     max-width: 95%;
     margin: 1.75rem auto;
-}
-
-.weight-600,
-.carousel-caption h5,
-.carousel-caption p {
-    font-weight: 100;
 }
 
 .dark-caption-background {
