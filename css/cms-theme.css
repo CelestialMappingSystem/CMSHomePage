@@ -50,7 +50,7 @@ h5 {
     position: absolute;
     width: 100%;
     text-align: left;
-    padding-left: 11rem;
+    padding-left: 8rem;
     color: white;
     top: 25%;
     left: 50%;
@@ -230,14 +230,6 @@ textarea{
     margin: 1.75rem auto;
 }
 
-.dark-caption-background {
-    background-color: #495057b5;
-    max-width: 60%;
-    padding-left: .5rem;
-    padding-right: .5rem;
-    margin: auto;
-}
-
 .object-position-top {
     object-position: top;
 }
@@ -267,10 +259,15 @@ div.row {
 
 .headshots{
     border-radius: 50%;
+    max-width: 250px;
+    height: auto;
+    object-fit: fill;
+    overflow: hidden;
 }
-.headshots-row-2{
+
+/* .headshots-row-2{
     border-radius: 50%;
-}
+} */
 
 .banner-img{
     background-position: center;
@@ -333,13 +330,16 @@ div.row {
         object-fit: cover;
         object-position: center top;
     }
+
     .carousel-item img {
         height: 35rem;
         object-fit: cover;
     }
+
     .give-me-more-height {
         margin-bottom: 1.5rem;
     }
+
     .body-container {
         padding-left: 1rem;
         padding-right: 1rem;
