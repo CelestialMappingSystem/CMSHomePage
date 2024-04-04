@@ -293,6 +293,15 @@ div.row {
     opacity: 50%;
 }
 
+.banner-img-publication{
+    background-position: center;
+    height: 250px;
+    background-size: cover;
+    margin-top: -2%;
+    background-image: url("../img/Mares.PNG");
+    opacity: 50%;
+}
+
 @media all and (max-width: 576px) {
     .body-container {
         padding-left: 1rem;
