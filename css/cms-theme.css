@@ -302,6 +302,21 @@ div.row {
     opacity: 50%;
 }
 
+.poster {
+    max-width: 450px;
+    height: auto;
+}
+
+.card {
+    margin-bottom: 30px;
+    border-width: 2px;
+}
+
+.poster-title {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
 @media all and (max-width: 576px) {
     .body-container {
         padding-left: 1rem;
