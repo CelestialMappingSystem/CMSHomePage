@@ -284,6 +284,15 @@ div.row {
     opacity: 50%;
 }
 
+.banner-img-gallery{
+    background-position: center;
+    height: 250px;
+    background-size: cover;
+    margin-top: -2%;
+    background-image: url("../img/UnifiedGeologicMap.png");
+    opacity: 40%; 
+}
+
 .banner-img-contact{
     background-position: center;
     height: 250px;
