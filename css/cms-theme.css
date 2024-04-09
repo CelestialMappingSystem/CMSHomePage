@@ -293,6 +293,15 @@ div.row {
     opacity: 40%; 
 }
 
+.banner-img-video{
+    background-position: center;
+    height: 250px;
+    background-size: cover;
+    margin-top: -2%;
+    background-image: url("../img/steel_Original.PNG");
+    opacity: 40%; 
+}
+
 .banner-img-contact{
     background-position: center;
     height: 250px;
