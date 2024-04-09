@@ -335,6 +335,14 @@ div.row {
     padding-bottom: 10px;
 }
 
+.gallery-img {
+    padding-bottom: 10px;
+    padding-top: 15px;
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+
 @media all and (max-width: 576px) {
     .body-container {
         padding-left: 1rem;
