@@ -341,6 +341,26 @@ div.row {
     width: 400px;
     height: 250px;
     object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-img:hover {
+    opacity: 0.7;
+}
+
+#modalCaption{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.close-btn{
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+#modalImage{
+    padding-bottom: 10px;
 }
 
 @media all and (max-width: 576px) {
