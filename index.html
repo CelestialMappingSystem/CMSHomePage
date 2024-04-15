@@ -340,7 +340,7 @@
             </div>
         </div>
         <div class="container body-container">
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row">
                     <div class="col">
                         <br>
@@ -397,7 +397,82 @@
                 </div>
                 <br>
                 <br>
-            </div>
+            </div> -->
+            <h2 class="text-left title"><strong>Training Videos</strong></h2>
+            <div class="video-container">
+                <div class="main-video-container">
+                   <video src="video/V0 - Eye Candy.mp4" loop controls class="main-video"></video>
+                   <h5 class="main-vid-title">Eye Candy Video</h5>
+                </div>
+                <div class="video-list-container">
+                    <div class="list active">
+                        <video src="video/V0 - Eye Candy.mp4" class="list-video"></video>
+                        <h5 class="list-title">Eye Candy Video</h5>
+                   </div>
+                   <div class="list">
+                        <video src="video/CMS_video_Part1.mp4" class="list-video"></video>
+                        <h5 class="list-title">Part 1 Demo</h5>
+                   </div>
+                   <div class="list">
+                        <video src="video/Video002c_Spr2021.mp4" class="list-video"></video>
+                        <h5 class="list-title">Part 2 Demo</h5>
+                    </div>
+                   <div class="list">
+                        <video src="video/CMS_Fall_2021_Presentation_v3d.mp4" class="list-video"></video>
+                        <h5 class="list-title">Part 3 Demo</h5>
+                   </div>
+                   <div class="list">
+                        <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
+                        <h5 class="list-title">Part 4 Demo</h5>
+                   </div>
+                   <div class="list">
+                        <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
+                        <h5 class="list-title">Part 5 Demo</h5>
+                    </div>
+                    <div class="list">
+                        <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
+                        <h5 class="list-title">Part 6 Demo</h5>
+                    </div>
+                </div>
+             </div>
+             <!-- <hr> -->
+             <!-- <h2 class="text-left title"><strong>Archived Videos</strong></h2> -->
+             <!-- <div class="video-container">
+                 <div class="main-video-container">
+                    <video src="video/V0 - Eye Candy.mp4" loop controls class="main-video"></video>
+                    <h5 class="main-vid-title">Eye Candy Video</h5>
+                 </div>
+                 <div class="video-list-container">
+                     <div class="list active">
+                         <video src="video/V0 - Eye Candy.mp4" class="list-video"></video>
+                         <h5 class="list-title">Eye Candy Video</h5>
+                    </div>
+                    <div class="list">
+                         <video src="video/CMS_video_Part1.mp4" class="list-video"></video>
+                         <h5 class="list-title">Part 1 Demo</h5>
+                    </div>
+                    <div class="list">
+                         <video src="video/Video002c_Spr2021.mp4" class="list-video"></video>
+                         <h5 class="list-title">Part 2 Demo</h5>
+                     </div>
+                    <div class="list">
+                         <video src="video/CMS_Fall_2021_Presentation_v3d.mp4" class="list-video"></video>
+                         <h5 class="list-title">Part 3 Demo</h5>
+                    </div>
+                    <div class="list">
+                         <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
+                         <h5 class="list-title">Part 4 Demo</h5>
+                    </div>
+                    <div class="list">
+                         <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
+                         <h5 class="list-title">Part 5 Demo</h5>
+                     </div>
+                     <div class="list">
+                         <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
+                         <h5 class="list-title">Part 6 Demo</h5>
+                     </div>
+                 </div>
+              </div> -->
         </div>
     </div>
 
@@ -1047,8 +1122,9 @@
         </div>
     </footer>
 
-    <!-- Javascript for handling tab change -->
+    <!-- Javascript -->
     <script>
+        // Handling tab change
         document.getElementById("aboutButton").click();
 
         function openTab(evt, tabName) {
@@ -1073,6 +1149,7 @@
             evt.currentTarget.className += " active";
         }
 
+        // Handling gallery image modals
         function showGalleryImage(element) {
             var imageSrc = element.querySelector('img').getAttribute('src');
             var captionText = element.querySelector('img').getAttribute('alt');
@@ -1081,6 +1158,20 @@
             document.getElementById("modalImage").alt = captionText;
             document.getElementById("modalCaption").textContent = captionText;
         }
+
+        // Handling video player
+        let videoList = document.querySelectorAll('.video-list-container .list');
+        videoList.forEach(vid =>{
+            vid.onclick = () =>{
+                videoList.forEach(remove =>{remove.classList.remove('active')});
+                vid.classList.add('active');
+                let src = vid.querySelector('.list-video').src;
+                let title = vid.querySelector('.list-title').innerHTML;
+                document.querySelector('.main-video-container .main-video').src = src;
+                document.querySelector('.main-video-container .main-video').play();
+                document.querySelector('.main-video-container .main-vid-title').innerHTML = title;
+            };
+        });
     </script>
 </body>
 
