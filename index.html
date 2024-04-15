@@ -29,10 +29,11 @@
 				</div>
                 <div class="tab" style="font-size: 25px;">
                     <a id="aboutButton" class="tablinks" onclick="openTab(event,'about')">Home</a>
-                    <a class="tablinks" onclick="openTab(event,'video')">Video Demonstration</a>
+                    <a class="tablinks" onclick="openTab(event,'instructional-video')">Instructional Videos</a>
                     <a class="tablinks" onclick="openTab(event,'team')">Team</a>
                     <a class="tablinks" onclick="openTab(event,'publication')">Publications</a>
                     <a class="tablinks" onclick="openTab(event,'gallery')">Gallery</a>
+                    <a class="tablinks" onclick="openTab(event,'archived-video')">Archived Videos</a>
                     <a class="tablinks" onclick="openTab(event,'contact')">Contact Us</a>
                 </div>
                 <div class="nasa-logo-col">
@@ -330,84 +331,25 @@
         </div>
     </div>
 
-    <!-- Video Demonstration Tab -->
-    <div id="video" class="tabcontent" style="display:none; margin-top:110px;">
+    <!-- Instructional Videos Tab -->
+    <div id="instructional-video" class="tabcontent" style="display:none; margin-top:110px;">
         <div class="banner">
-            <div class="container banner-img-video"></div>
+            <div class="container banner-img banner-img-video"></div>
             <div class="cms-tab-banner-text">
-                <h1 class="banner-text-title">Videos</h1>
-                <h5>Explore a variety of CMS platform features and capabilities through these demonstrations</h5>
+                <h1 class="banner-text-title">Instructional Videos</h1>
+                <h5>Learn how to use CMS through these instructional videos</h5>
             </div>
         </div>
         <div class="container body-container">
-            <!-- <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <br>
-                        <h2 class="text-center">Video Demonstration 1</h2>
-                        <br>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <video width="1920" height="1080" controls="true" class="embed-responsive-item">
-								<source src="video/CMS_video_Part1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <hr>
-                <div class="row">
-                    <div class="col">
-                        <br>
-                        <h2 class="text-center">Video Demonstration 2</h2>
-                        <br>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <video width="1920" height="1080" controls="true" class="embed-responsive-item">
-								<source src="video/Video002c_Spr2021.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <hr>
-                <div class="row">
-                    <div class="col">
-                        <br>
-                        <h2 class="text-center">Video Demonstration 3</h2>
-                        <br>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <video width="1920" height="1080" controls="true" class="embed-responsive-item">
-								<source src="video/CMS_Fall_2021_Presentation_v3d.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <hr>
-                <div class="row">
-                    <div class="col">
-                        <br>
-                        <h2 class="text-center">Video Demonstration 4</h2>
-                        <br>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <video width="1920" height="1080" controls="true" class="embed-responsive-item">
-                                <source src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" type="video/mp4">
-							</video>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-            </div> -->
-            <h2 class="text-left title"><strong>Training Videos</strong></h2>
             <div class="video-container">
                 <div class="main-video-container">
                    <video src="video/V0 - Eye Candy.mp4" loop controls class="main-video"></video>
-                   <h5 class="main-vid-title">Eye Candy Video</h5>
+                   <h5 class="main-vid-title">Overview Video</h5>
                 </div>
                 <div class="video-list-container">
                     <div class="list active">
                         <video src="video/V0 - Eye Candy.mp4" class="list-video"></video>
-                        <h5 class="list-title">Eye Candy Video</h5>
+                        <h5 class="list-title">Overview Video</h5>
                    </div>
                    <div class="list">
                         <video src="video/CMS_video_Part1.mp4" class="list-video"></video>
@@ -425,61 +367,56 @@
                         <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
                         <h5 class="list-title">Part 4 Demo</h5>
                    </div>
-                   <div class="list">
-                        <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
-                        <h5 class="list-title">Part 5 Demo</h5>
-                    </div>
-                    <div class="list">
-                        <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
-                        <h5 class="list-title">Part 6 Demo</h5>
-                    </div>
                 </div>
              </div>
-             <!-- <hr> -->
-             <!-- <h2 class="text-left title"><strong>Archived Videos</strong></h2> -->
-             <!-- <div class="video-container">
-                 <div class="main-video-container">
+        </div>
+    </div>
+
+    <!-- Archived Videos Tab -->
+    <div id="archived-video" class="tabcontent" style="display:none; margin-top:110px;">
+        <div class="banner">
+            <div class="container banner-img banner-img-archive"></div>
+            <div class="cms-tab-banner-text">
+                <h1 class="banner-text-title">Archived Videos</h1>
+                <h5>View our archive of video demonstrations</h5>
+            </div>
+        </div>
+        <div class="container body-container">
+            <div class="video-container">
+                <div class="main-video-container">
                     <video src="video/V0 - Eye Candy.mp4" loop controls class="main-video"></video>
-                    <h5 class="main-vid-title">Eye Candy Video</h5>
-                 </div>
-                 <div class="video-list-container">
-                     <div class="list active">
-                         <video src="video/V0 - Eye Candy.mp4" class="list-video"></video>
-                         <h5 class="list-title">Eye Candy Video</h5>
+                    <h5 class="main-vid-title">Overview Video</h5>
+                </div>
+                <div class="video-list-container">
+                    <div class="list active">
+                        <video src="video/V0 - Eye Candy.mp4" class="list-video"></video>
+                        <h5 class="list-title">Overview Video</h5>
                     </div>
                     <div class="list">
-                         <video src="video/CMS_video_Part1.mp4" class="list-video"></video>
-                         <h5 class="list-title">Part 1 Demo</h5>
+                        <video src="video/CMS_video_Part1.mp4" class="list-video"></video>
+                        <h5 class="list-title">Part 1 Demo</h5>
                     </div>
                     <div class="list">
-                         <video src="video/Video002c_Spr2021.mp4" class="list-video"></video>
-                         <h5 class="list-title">Part 2 Demo</h5>
-                     </div>
-                    <div class="list">
-                         <video src="video/CMS_Fall_2021_Presentation_v3d.mp4" class="list-video"></video>
-                         <h5 class="list-title">Part 3 Demo</h5>
+                        <video src="video/Video002c_Spr2021.mp4" class="list-video"></video>
+                        <h5 class="list-title">Part 2 Demo</h5>
                     </div>
                     <div class="list">
-                         <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
-                         <h5 class="list-title">Part 4 Demo</h5>
+                        <video src="video/CMS_Fall_2021_Presentation_v3d.mp4" class="list-video"></video>
+                        <h5 class="list-title">Part 3 Demo</h5>
                     </div>
                     <div class="list">
-                         <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
-                         <h5 class="list-title">Part 5 Demo</h5>
-                     </div>
-                     <div class="list">
-                         <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
-                         <h5 class="list-title">Part 6 Demo</h5>
-                     </div>
-                 </div>
-              </div> -->
+                        <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
+                        <h5 class="list-title">Part 4 Demo</h5>
+                    </div>
+                </div>
+                </div>
         </div>
     </div>
 
     <!-- Meet the Team Tab -->
     <div id="team" class="tabcontent" style="display:none; margin-top:110px;">
         <div class="banner">
-            <div class="container banner-img-team"></div>
+            <div class="container banner-img banner-img-team"></div>
             <div class="cms-tab-banner-text">
                 <h1 class="banner-text-title">Meet the Team</h1>
                 <h5>Learn more about our team of NASA scientists and engineers behind CMS</h5>
@@ -681,7 +618,7 @@
     <!-- Publications Tab -->
     <div id="publication" class="tabcontent" style="display:none; margin-top:110px">
         <div class="banner">
-            <div class="container banner-img-publication"></div>
+            <div class="container banner-img banner-img-publication"></div>
             <div class="cms-tab-banner-text">
                 <h1 class="banner-text-title">Publications</h1>
                 <h5>Explore the research abstracts and posters featuring CMS</h5>
@@ -807,7 +744,7 @@
     <!-- Gallery Tab -->
     <div id="gallery" class="tabcontent" style="display:none; margin-top:115px; height:55.9%">
         <div class="banner">
-            <div class="container banner-img-gallery"></div>
+            <div class="container banner-img banner-img-gallery"></div>
             <div class="cms-tab-banner-text">
                 <h1 class="banner-text-title">Gallery</h1>
                 <h5>Uncover various use cases with CMS through this interactive gallery</h5>
@@ -1089,7 +1026,7 @@
     <!-- Contact Us Tab -->
     <div id="contact" class="tabcontent" style="display:none; margin-top:115px; height:55.9%">
         <div class="banner">
-            <div class="container banner-img-contact"></div>
+            <div class="container banner-img banner-img-contact"></div>
             <div class="cms-tab-banner-text">
                 <h1 class="banner-text-title">Contact Us</h1>
                 <h5>Have any questions about CMS?</h5>

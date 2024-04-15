@@ -114,8 +114,8 @@ h5 {
     font-size: 20px;
     font-weight: 400%;
     color: white;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
     font-family: 'Inter', sans-serif;
     font-style: normal;
 }
@@ -275,49 +275,36 @@ div.row {
     overflow: hidden;
 }
 
-.banner-img-team{
+.banner-img {
     background-position: center;
     height: 250px;
     background-size: cover;
     margin-top: -2%;
+    opacity: 50%;
+}
+
+.banner-img-team {
     background-image: url("../img/titancms.PNG");
-    opacity: 50%;
 }
 
-.banner-img-gallery{
-    background-position: center;
-    height: 250px;
-    background-size: cover;
-    margin-top: -2%;
+.banner-img-gallery {
     background-image: url("../img/UnifiedGeologicMap.png");
-    opacity: 40%; 
 }
 
-.banner-img-video{
-    background-position: center;
-    height: 250px;
-    background-size: cover;
-    margin-top: -2%;
+.banner-img-video {
     background-image: url("../img/steel_original_large.png");
-    opacity: 40%; 
 }
 
-.banner-img-contact{
-    background-position: center;
-    height: 250px;
-    background-size: cover;
-    margin-top: -2%;
+.banner-img-contact {
     background-image: url("../img/venus1.PNG");
-    opacity: 50%;
 }
 
-.banner-img-publication{
-    background-position: center;
-    height: 250px;
-    background-size: cover;
-    margin-top: -2%;
+.banner-img-publication {
     background-image: url("../img/Mares.PNG");
-    opacity: 50%;
+}
+
+.banner-img-archive {
+    background-image: url("../img/clem.PNG");
 }
 
 .poster {
