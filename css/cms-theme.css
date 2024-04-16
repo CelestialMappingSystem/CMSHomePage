@@ -383,6 +383,10 @@ div.row {
     box-shadow: 0 2px 5px;
     padding: 15px;
 }
+
+.archive-video-list-container{
+    height: 400px;
+}
  
 .video-list-container::-webkit-scrollbar {
     width: 10px;

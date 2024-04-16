@@ -342,11 +342,11 @@
         </div>
         <div class="container body-container">
             <div class="video-container">
-                <div class="main-video-container">
+                <div class="instructional-main-video-container main-video-container">
                    <video src="video/V0 - Eye Candy.mp4" loop controls class="main-video"></video>
                    <h5 class="main-vid-title">Overview Video</h5>
                 </div>
-                <div class="video-list-container">
+                <div class="instructional-video-list-container video-list-container">
                     <div class="list active">
                         <video src="video/V0 - Eye Candy.mp4" class="list-video"></video>
                         <h5 class="list-title">Overview Video</h5>
@@ -378,21 +378,17 @@
             <div class="container banner-img banner-img-archive"></div>
             <div class="cms-tab-banner-text">
                 <h1 class="banner-text-title">Archived Videos</h1>
-                <h5>View our archive of video demonstrations</h5>
+                <h5>View our archive of video demonstrations showing the progress of CMS</h5>
             </div>
         </div>
         <div class="container body-container">
             <div class="video-container">
-                <div class="main-video-container">
-                    <video src="video/V0 - Eye Candy.mp4" loop controls class="main-video"></video>
-                    <h5 class="main-vid-title">Overview Video</h5>
+                <div class="archive-main-video-container main-video-container">
+                    <video src="video/CMS_video_Part1.mp4" loop controls class="main-video"></video>
+                    <h5 class="main-vid-title">Part 1 Demo</h5>
                 </div>
-                <div class="video-list-container">
+                <div class="archive-video-list-container video-list-container">
                     <div class="list active">
-                        <video src="video/V0 - Eye Candy.mp4" class="list-video"></video>
-                        <h5 class="list-title">Overview Video</h5>
-                    </div>
-                    <div class="list">
                         <video src="video/CMS_video_Part1.mp4" class="list-video"></video>
                         <h5 class="list-title">Part 1 Demo</h5>
                     </div>
@@ -1096,17 +1092,30 @@
             document.getElementById("modalCaption").textContent = captionText;
         }
 
-        // Handling video player
-        let videoList = document.querySelectorAll('.video-list-container .list');
+        // Handling video players
+        let videoList = document.querySelectorAll('.instructional-video-list-container .list');
         videoList.forEach(vid =>{
             vid.onclick = () =>{
                 videoList.forEach(remove =>{remove.classList.remove('active')});
                 vid.classList.add('active');
                 let src = vid.querySelector('.list-video').src;
                 let title = vid.querySelector('.list-title').innerHTML;
-                document.querySelector('.main-video-container .main-video').src = src;
-                document.querySelector('.main-video-container .main-video').play();
-                document.querySelector('.main-video-container .main-vid-title').innerHTML = title;
+                document.querySelector('.instructional-main-video-container .main-video').src = src;
+                document.querySelector('.instructional-main-video-container .main-video').play();
+                document.querySelector('.instructional-main-video-container .main-vid-title').innerHTML = title;
+            };
+        });
+
+        let archiveVideoList = document.querySelectorAll('.archive-video-list-container .list');
+        archiveVideoList.forEach(vid =>{
+            vid.onclick = () =>{
+                archiveVideoList.forEach(remove =>{remove.classList.remove('active')});
+                vid.classList.add('active');
+                let src = vid.querySelector('.list-video').src;
+                let title = vid.querySelector('.list-title').innerHTML;
+                document.querySelector('.archive-main-video-container .main-video').src = src;
+                document.querySelector('.archive-main-video-container .main-video').play();
+                document.querySelector('.archive-main-video-container .main-vid-title').innerHTML = title;
             };
         });
     </script>
