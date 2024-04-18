@@ -52,7 +52,7 @@ h5 {
     text-align: left;
     padding-left: 8rem;
     color: white;
-    top: 25%;
+    top: 170px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 1;
@@ -68,7 +68,7 @@ h5 {
     text-align: left;
     padding-left: 11rem;
     color: white;
-    top: 50%;
+    top: 320px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -461,7 +461,7 @@ div.row {
         text-align: left;
         padding-left: 7rem;
         color: white;
-        top: 35%;
+        top: 250px;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
