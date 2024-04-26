@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="NASA Celestial Mapping System for 3D visualization of the lunar surface using the Java platform.">
-
     <link rel="stylesheet" type="text/css" href="css/bootstrap_4_6_0_dist/css/bootstrap.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/cms-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/bootstrap_4_6_0_dist/js/bootstrap.bundle.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="css/cms-theme.css">
-
     <script type="text/javascript" src="./js/carousel_img_modal.js"></script>
-
-
-
     <title>The Celestial Mapping System</title>
 </head>
 
 <body>
     <div class="wrapper banner-wrapper">
-        <div class="banner" style="overflow: hidden; position: fixed;top: 0;width: 100%;z-index: 20;">
+        <div class="banner" style="overflow: hidden; position: fixed; top: 0; width: 100%; z-index: 20;">
             <div class="row banner-logos">
                 <div class="cms-logo-col">
-					<a href="https://celestial.arc.nasa.gov/" target="_blank">
-						<img src="img/cms-logo.png" alt="CMS Home Page">
+					<a href="https://celestial.arc.nasa.gov/">
+						<img id=cms-main-logo src="img/cms-logo-high-res.png" alt="CMS Home Page">
 					</a>					
 				</div>
-                <div class="tab" style="font-size: 23px;">
-                    <button id="aboutButton" class="tablinks" onclick="openTab(event,'about')">Home</button>
-                    <button class="tablinks" onclick="openTab(event,'video')">Video Demonstration</button>
-                    <button class="tablinks" onclick="openTab(event,'team')">Meet the Team</button>
-                    <button class="tablinks" onclick="openTab(event,'publication')">Publications</button>
-                    <button class="tablinks" onclick="openTab(event,'contact')">Contact Us</button>
+                <div class="tab" style="font-size: 25px;">
+                    <a id="aboutButton" class="tablinks" onclick="openTab(event,'about')">Home</a>
+                    <a class="tablinks" onclick="openTab(event,'instructional-video')">Videos</a>
+                    <a class="tablinks" onclick="openTab(event,'team')">Team</a>
+                    <a class="tablinks" onclick="openTab(event,'publication')">Publications</a>
+                    <a class="tablinks" onclick="openTab(event,'gallery')">Gallery</a>
+                    <a class="tablinks" onclick="openTab(event,'archived-video')">Archived Videos</a>
+                    <a class="tablinks" onclick="openTab(event,'contact')">Contact Us</a>
                 </div>
                 <div class="nasa-logo-col">
 					<a href="https://www.nasa.gov/" target="_blank">
-						<img src="img/nasa-meatball-logo.png" alt="NASA Home Page">
+						<img id=nasa-meatball-logo src="img/nasa-meatball-logo-high-res.png" alt="NASA Home Page">
 					</a>
 				</div>
             </div>
         </div>
     </div>
 
-    <!-- About Complete -->
-    <div id="about" class="tabcontent" style="display:block; margin-top:110px;">
+    <!-- Main Page -->
+    <div id="about" class="tabcontent" style="display:block; margin-top:80px;">
         <div class="wrapper banner-wrapper">
             <div class="banner">
-                <div class="cms-banner-text">
-                    <br>
-                    <h1>Celestial Mapping System</h1>
-                    <h2>NASA Ames Research Center</h2>
-                </div>
-           
                 <div class="container" id="banner-carousel">
-                    
+                    <div class="cms-banner-text">
+                        <br>
+                        <h1>Celestial Mapping System</h1>
+                        <h2>NASA Ames Research Center</h2>
+                    </div>
                     <!-- Carousel should pop out a gallery view of pictures -->
                     <div id="carouselSlides" data-toggle="modal" data-target="#exampleModal" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -73,119 +70,93 @@
                             <li data-target="#carouselSlides" data-slide-to="9"></li>
                             <li data-target="#carouselSlides" data-slide-to="10"></li>
                             <li data-target="#carouselSlides" data-slide-to="11"></li>
-                            <li data-target="#carouselSlides" data-slide-to="12"></li>
-                            <li data-target="#carouselSlides" data-slide-to="13"></li>
-                            <li data-target="#carouselSlides" data-slide-to="14"></li>
                         </ol>
                         <div class="carousel-inner">
                             <div data-slide-number="0" class="carousel-item active fancybox">
-                                <img class="c-img d-block w-100" src="img/blue005.png" alt="First slide - LOLA Blue Steel">
+                                <img class="c-img d-block w-100" src="img/blue005.png" alt="LOLA Blue Steel">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5 class="invisible">LOLA Color Shaded Relief Blue Steel</h5>
-                                    <p class="invisible">3D terrain with LOLA Color Shaded Relief Blue Steel derived from LRO elevation data without vertical exaggeration.</p>
+                                    <h5>LOLA Color Shaded Relief Blue Steel</h5>
+                                    <p>3D terrain with LOLA Color Shaded Relief Blue Steel derived from LRO elevation data without vertical exaggeration.</p>
                                 </div>
                             </div>
                             <div data-slide-number="1" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/latlongrat.PNG" alt="Second slide">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Lat-Lon Graticule conforming to Mountains</h5>
-                                    <p>Path conforming Lat-Lon graticules provide accurate analysis of the lunar surface.</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="2" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/apollo17objects.PNG" alt="Third slide - Apollo 17 Landing Site with example 3D COLLADA objects representing astronauts and the Apollo 15 landing craft.">
+                                <img class="c-img d-block w-100" src="img/apollo17objects.PNG" alt="Apollo 17 Landing Site with example 3D COLLADA objects representing astronauts and the Apollo 15 landing craft">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Apollo 15 Landing Site 3D Objects</h5>
                                     <p>Example of 3D COLLADA objects in CMS, showing astronauts and landing craft at the Apollo 15 landing site.</p>
                                 </div>
                             </div>
-                            <div data-slide-number="3" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/ApolloMissions.PNG" alt="Fourth slide - Apollo Landing sites with annotations on the lunar surface showing location and mission badges.">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
-                                    <h5>Apollo Mission Landing Sites</h5>
-                                    <p>These "balloon" annotations show various Apollo landing sites along with their respective mission dates and badges.</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="4" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/GARS.PNG" alt="Fifth slide - GARS graticule over Copernicus Crater">
+                            <div data-slide-number="2" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/GARS.PNG" alt="GARS graticule over Copernicus Crater">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>GARS graticule over Copernicus Crater</h5>
+                                    <h5>GARS Graticule over Copernicus Crater</h5>
                                     <p>Path conforming Lat-Lon graticules provide accurate analysis of the lunar surface.</p>
                                 </div>
                             </div>
-                            <div data-slide-number="5" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100 object-position-top" src="img/UnifiedGeologicMap.png" alt="Sixth slide - 2020 Unified Geologic Map of the Moon">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
-                                    <h5>2020 Unified Geologic Map of the Moon</h5>
-                                    <p>One of the newest data sets in CMS, the 2020 Unified Geologic Map of the Moon is a seamless renovation of six previous maps combined with data from multiple space agencies.</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="6" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/stereo2.PNG" alt="Seventh slide - Stereoscopic View of a mountainous crater">
+                            <div data-slide-number="3" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/stereo2.PNG" alt="Stereoscopic View of a mountainous crater">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>Stereoscopic View of a mountainous crater</h5>
+                                    <h5>Stereoscopic View of a Mountainous Crater</h5>
                                     <p>Stereo view using Red and Blue overlays brings out craters and prominent features</p>
                                 </div>
                             </div>
-                            <div data-slide-number="7" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/venus1.PNG" alt="Eighth slide - 3D Projection of Venus">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
-                                    <h5>3D Projection of Venus</h5>
-                                    <p>CMS has the potential to project data from any celestial body onto a 3D Globe Object.</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="8" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/moon4.PNG" alt="Ninth slide - LOLA Color Shaded Relief Map">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
+                            <div data-slide-number="4" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/moon4.PNG" alt="LOLA Color Shaded Relief Map">
+                                <div class="carousel-caption d-none d-md-block">
                                     <h5>LOLA Color Shaded Relief Map</h5>
                                     <p>Maps from various missions can be projected using CMS, such as this LOLA Color Shaded Relief Map (388m/px)</p>
                                 </div>
                             </div>
+                            <div data-slide-number="5" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/latlongrat.PNG" alt="Lat-Lon Graticules">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Lat-Lon Graticule Conforming to Mountains</h5>
+                                    <p>Path conforming Lat-Lon graticules provide accurate analysis of the lunar surface.</p>
+                                </div>
+                            </div>
+                            <div data-slide-number="6" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/sp.PNG" alt="South Pole LOLA Color Shaded Relief Projection">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>South Pole LOLA Color Shaded Relief Projection</h5>
+                                    <p>Projection of the Lunar South Pole derived from LRO elevation data using the LOLA Color Shaded Relief map layer</p>
+                                </div>
+                            </div>
+                            <div data-slide-number="7" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/placemarks.PNG" alt="USGS Lunar Placemarks">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>USGS Lunar Placemarks</h5>
+                                    <p>CMS contains Shapefiles from USGS that display over 7000 lunar landmarks</p>
+                                </div>
+                            </div>
+                            <div data-slide-number="8" class="carousel-item fancybox">
+                                <img class="c-img d-block w-100" src="img/moonshading.png" alt="Moon Shading Simulation">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Moon Shading Simulation</h5>
+                                    <p>Users can enter a start and end date and simulate the passage of the sun across the moon's surface.</p>
+                                </div>
+                            </div>
                             <div data-slide-number="9" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/profiler2.PNG" alt="Tenth slide - Terrain Elevation Profile Tool">
+                                <img class="c-img d-block w-100" src="img/profiler2.PNG" alt="Terrain Elevation Profile Tool">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Terrain Elevation Profile Tool</h5>
                                     <p>Analysis of the the elevation profile of Mare Orientale​.</p>
                                 </div>
                             </div>
                             <div data-slide-number="10" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/sp.PNG" alt="Eleventh slide - South Pole LOLA Color Shaded Relief Projection">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
-                                    <h5>South Pole LOLA Color Shaded Relief Projection</h5>
-                                    <p>Projection of the Lunar South Pole derived from LRO elevation data ​using the LOLA Color Shaded Relief map layer</p>
+                                <img class="c-img d-block w-100 object-position-top" src="img/UnifiedGeologicMap.png" alt="2020 Unified Geologic Map of the Moon">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>2020 Unified Geologic Map of the Moon</h5>
+                                    <p>One of the newest data sets in CMS, the 2020 Unified Geologic Map of the Moon is a seamless renovation of six previous maps combined with data from multiple space agencies.</p>
                                 </div>
                             </div>
                             <div data-slide-number="11" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/placemarks.PNG" alt="Twelfth slide - USGS Lunar Placemarks">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
-                                    <h5>USGS Lunar Placemarks</h5>
-                                    <p>CMS contains Shapefiles from USGS that display over 7000 lunar landmarks</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="12" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/mars3.PNG" alt="Thirteenth slide - 3D Projection of Mars">
+                                <img class="c-img d-block w-100" src="img/ApolloMissions.PNG" alt="Apollo Landing sites with annotations on the lunar surface showing location and mission badges.">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>3D Projection of Mars</h5>
-                                    <p>CMS has the potential to project data from any celestial body onto a 3D Globe Object.</p>
+                                    <h5>Apollo Mission Landing Sites</h5>
+                                    <p>These "balloon" annotations show various Apollo landing sites along with their respective mission dates and badges.</p>
                                 </div>
                             </div>
-                            <div data-slide-number="13" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/titancms.PNG" alt="Fourteenth slide - 3D Projection of Titan">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>3D Projection of Titan</h5>
-                                    <p>CMS has the potential to project data from any celestial body onto a 3D Globe Object.</p>
-                                </div>
-                            </div>
-                            <div data-slide-number="14" class="carousel-item fancybox">
-                                <img class="c-img d-block w-100" src="img/moonshading.png" alt="Fifthteenth slide - Moon Shading Simulation">
-                                <div class="carousel-caption d-none d-md-block dark-caption-background">
-                                    <h5>Moon Shading Simulation</h5>
-                                    <p>Users can enter a start and end date and simulate the passage of the sun across the moon's surface.</p>
-                                </div>
-                            </div>
-        
                         </div>
-        
                         <a class="carousel-control-prev" href="#carouselSlides" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
@@ -202,7 +173,6 @@
         <div class="container body-container">
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-    
                     <div class="modal-content container-fluid">
                         <div id="carouselExample" class="carousel slide" data-ride="carousel">
                             <div class="modal-header row">
@@ -211,7 +181,6 @@
                             </div>
                             <div class="modal-body">
                                 <!-- Change image source for large popup-->
-    
                                 <img src='' id="modal-img-id" class="img-responsive modal-img" alt="Responsive image">
                                 <a class="carousel-control-prev" href="#carouselSlides" role="button" data-slide="prev" id="modal-prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -221,116 +190,82 @@
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
-    
                             </div>
                             <div class="modal-footer">
                                 <h5 class="modal-title text-center col-12" id="myModalFooter"></h5>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             </div>
-    
                         </div>
                     </div>
-    
-    
-    
                 </div>
             </div>
+
             <div class="container">
-                <br>
-                <h2 class="text-center"><strong>What is the Celestial Mapping System?</strong></h2>
-                <div style="column-count: 2;">
-                    <div>
-                        <p class="weight-600">
-                            The Celestial Mapping System (CMS) is a software platform to generate virtual 3D globes for celestial bodies within our solar system. Various layers are built on top of the virtal globe to provide visualization of high resolution imagery, enable precise
-                            measurements, build analytical capabilities and a broad range of functionalities to assist planetary scientists and mission planners.
-                        </p>
-                        <p class="weight-600">
-                            The present focus of CMS is on developing lunar mapping tool kits to provide features such as - 3D first person view with zoom and navigational capabilities, realistic terrain visualization based on LRO data, measurement tools, Apollo landing site annotations,
-                            stereoscopic view, elevation profiles, line of sight analysis and many more. The application is developed to provide situational and domain awareness on the Lunar surface, planning capabilities for equipment placements and traverse path
-                            optimization.
-                        </p>
+                <h2 class="text-left title"><strong>CMS Overview</strong></h2>
+                <div style="column-count: 2">
+                    <div class="overview-text">
+                        <p><strong>The Celestial Mapping System (CMS) is a software platform to 
+                            generate virtual 3D globes for celestial bodies within our solar system.</strong></p>
+                        <p> Multiple planetary data layers can be added to the virtual globe to 
+                            provide visualization of high-resolution imagery and elevation data, which 
+                            enables precise measurements, tools for analytical capabilities, and a broad range 
+                            of other functionalities to assist planetary scientists and mission planners. 
+                            Third-party planetary data can be ingested into CMS with minimal effort.</p>
+                        <p> The present focus of CMS is on developing lunar mapping tools and features: 
+                            3D first person view with zoom and navigational capabilities, realistic 
+                            terrain visualization based on LRO data, measurement tools, Apollo, CLPS and 
+                            international mission landing site annotations, 3D Models, stereoscopic view, 
+                            terrain profiling, line of sight analysis, sunlight shading, and many more. The 
+                            application has been developed to provide situational and domain awareness on 
+                            the Lunar surface, planning capabilities for equipment placement, and traverse 
+                            path optimization.</p>
                     </div>
                     <div class="embed-responsive embed-responsive-16by9">
-                        <video width="1920" height="1080" controls="true" class="embed-responsive-item">
-                            <source src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" type="video/mp4">
+                        <video controls="true" class="embed-responsive-item">
+                            <source src="instr-video/V0 - CMS Overview - Brian Audio.mp4" type="video/mp4">
                         </video>
                     </div>
-                    
                 </div>
-                
-                <br>
             </div>
             <hr>
             <div class="container">
-                <h2 class="text-center"><strong>Current Capabilities</strong></h2>
-                <br>
+                <h2 class="text-left title"><strong>Current Capabilities</strong></h2>
                 <div class="row">
                     <div class="col">
-                        <ul class="list-group weight-600">
-                            <li>
-                                Accurate display of lunar imagery and terrain, and their geometric figures​
-                            </li>
-                            <li>
-                                Ability to accurately measure and profile terrain elevation​
-                            </li>
-                            <li>
-                                Accurate display of lunar place names of known locations
-                            </li>
-                            <li>
-                                Interactive 3D models of Apollo Astronauts and the vehicles remaining at the Apollo landing sites
-                            </li>
-                            <li>
-                                Georeferenced imagery of Apollo landing sites​​​
-                            </li>
-                            <li>
-                                Stereographic "3D" view​ of the lunar surface​
-                            </li>
-                            <li>
-                                High quality graticules​
-                            </li>
-                            <li>
-                                Navigation capabilities; view controls, scalebar, and graticules
-                            </li>
-                            <li>
-                                2D Minimap with click to navigate functionality
-                            </li>
-                            <li>
-                                Place 3D Models of Equipment with Line of Sight Analysis
-                            </li>
-                            <li>
-                                Save and Load Equipment Placement Icons
-                            </li>
+                        <ul class="list-group">
+                            <h5 class="text-left subtitle"> Visual Imagery & 3D Models </h5>
+                            <li>Accurate displays and geometric figures of lunar imagery, terrain, and place names of known location</li>
+                            <li>Ability to accurately measure and profile terrain elevation</li>
+                            <li>Georeferenced imagery of Apollo landing sites</li>
+                            <li>High quality graticules</li>
+                            <br>
+                            <h5 class="text-left subtitle"> Layer Management </h5>
+                            <li>Server access to implement new datasets and high resolution map layers</li>
+                            <li>View precise locations of CLPS and international landing sites</li>
+                            <li>Access to WMS layer manager</li>
+                            <br>
+                            <h5 class="text-left subtitle"> Navigation </h5>
+                            <li>Automated “Fly To” points of interest and pre-loaded layers</li>
+                            <li>2D minimap with click to navigate functionality</li>
+                            <li>"Go To" decimal degree coordinates feature</li>
+                            <li>Navigation capabilities including view controls, scalebar, and graticules</li>
                         </ul>
                     </div>
                     <div class="col">
-                        <ul class="list-group weight-600">
-                            <li>
-                                Server access to implement new datasets​ and high resolution map layers
-                            </li>
-                            <li>
-                                Moon Shading/Illumination with Sun Angle Calculations by user selected date and time
-                            </li>
-                            <li>
-                                Import/Export for KML, CSV, ESRI Shape and GeoTIFF files
-                            </li>
-                            <li>
-                                Ability to calculate and display lunar terrain intersections from a central viewpoint
-                            </li>
-                            <li>
-                                "Go To" decimal degree coordinates feature
-                            </li>
-                            <li>
-                                Ability to add customizable named placemarks at a set of coordinates
-                            </li>
-                            <li>
-                                WMS Layer Manager
-                            </li>
-                            <li>
-                                Searchable table of over 7000 named features that can be sorted and clicked in order to display placemarks and their annotations
-                            </li>
-                            <li>
-                                Viewshed analysis
-                            </li>
+                        <ul class="list-group">
+                            <h5 class="text-left subtitle"> Measurement & Analysis </h5>
+                            <li>Ability to calculate and display lunar terrain intersections from a central viewpoint</li>
+                            <li>Import/Export for KML, CSV, ESRI shape and GeoTIFF files</li>
+                            <li>Run sophisticated viewshed analysis showing line of sight obstructions due to terrain</li>
+                            <li>Viewshed analysis</li>
+                            <br>
+                            <h5 class="text-left subtitle"> Equipment & Feature Placement </h5>
+                            <li>Searchable table of over 7000 named features that can be sorted and clicked to display placemarks and their annotations</li>
+                            <li>Interactive 3D models of Apollo astronauts and vehicles remaining at the Apollo landing sites</li>
+                            <li>Ability to add customizable named placemarks at a set of coordinates</li>
+                            <li>Place 3D models of equipment with line of sight analysis</li>
+                            <li>Save and load equipment placement icons</li>
+                            <li>Stereographic "3D" view of the lunar surface</li>
 						</ul>
                     </div>
                 </div>
@@ -338,169 +273,170 @@
             <br>
             <hr>
             <div class="container">
+                <h2 class="text-left title"><strong>Future Plans</strong></h2>
                 <div class="row">
                     <div class="col">
-                        <p>
-                            <h3 class="text-center"><strong>Long Term Plans</strong></h3>
-                        </p>
-                        <ul class="list-group weight-600">
-                            <li>
-                                Ability to simulate a “first person view” with situational and domain awareness of a vehicle traversing the lunar landscape​
-                            </li>
-                            <li>
-                                Subsurface visualization & analysis
-                            </li>
-                            <li>
-                                Real time satellite tracker
-                            </li>
-                            <li>
-                                Virtual Reality support
-                            </li>
-                            <li>
-                                Lunar resource assessment
-                            </li>
-                            <li>
-                                Simulation of cislunar satellites
-                            </li>
-                            <li>
-                                Mission planning capabilities for equipment placements and traverse path optimization
-                            </li>
-                            <li>
-                                Ability to visualize map projections from other celestial bodies
-                            </li>
-                            <li>
-                                Artificial Intelligence-assisted data enhancement
-                            </li>
-                            <li>
-                                Advanced 3D visualization with intelligent search-by-example
-                            </li>
-                            <li>
-                                Ingestion of planetary datasets (e.g. PDS) with AI-assisted tools
-                            </li>
-                            <li>
-                                Plug-in architecture for specific use cases
-                            </li>
+                        <ul class="list-group">
+                            <h5 class="text-left subtitle"> Enhanced Visualization </h5>
+                            <li>Ability to simulate a “first person view” with situational and domain awareness of a vehicle traversing the lunar landscape​</li>
+                            <li>Ability to visualize map projections from other celestial bodies</li>
+                            <li>Subsurface visualization & analysis</li>
+                            <li>Virtual reality support</li>
+                            <br>
+                            <h5 class="text-left subtitle"> AI Tools </h5>
+                            <li>Artificial intelligence-assisted data enhancement</li>
+                            <li>Advanced 3D visualization with intelligent search-by-example</li>
+                            <li>Ingestion of planetary datasets (PDS) with AI-assisted tools</li>
+						</ul>
+                    </div>
+                    <div class="col">
+                        <ul class="list-group">
+                            <h5 class="text-left subtitle"> Additional Mission Planning Tools </h5>
+                            <li>Mission planning capabilities for equipment placements and traverse path optimization</li>
+                            <li>Plug-in architecture for specific use cases</li>
+                            <li>Lunar resource assessment</li>
+                            <li>Real time satellite tracker</li>
+                            <li>Simulation of cislunar satellites</li>
 						</ul>
                     </div>
                 </div>
+                <br>
                 <br>
                 <br>
             </div>
         </div>
     </div>
 
-    <!-- Video Demonstration Tab -->
-    <div id="video" class="tabcontent" style="display:none; margin-top:150px;">
-        <div class="container body-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <br>
-                        <h2 class="text-center">Video Demonstration 1</h2>
-                        <br>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <video width="1920" height="1080" controls="true" class="embed-responsive-item">
-								<source src="video/CMS_video_Part1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <hr>
-                <div class="row">
-                    <div class="col">
-                        <br>
-                        <h2 class="text-center">Video Demonstration 2</h2>
-                        <br>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <video width="1920" height="1080" controls="true" class="embed-responsive-item">
-								<source src="video/Video002c_Spr2021.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <hr>
-                <div class="row">
-                    <div class="col">
-                        <br>
-                        <h2 class="text-center">Video Demonstration 3</h2>
-                        <br>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <video width="1920" height="1080" controls="true" class="embed-responsive-item">
-								<source src="video/CMS_Fall_2021_Presentation_v3d.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <hr>
-                <div class="row">
-                    <div class="col">
-                        <br>
-                        <h2 class="text-center">Video Demonstration 4</h2>
-                        <br>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <video width="1920" height="1080" controls="true" class="embed-responsive-item">
-                                <source src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" type="video/mp4">
-							</video>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
+    <!-- Videos Tab -->
+    <div id="instructional-video" class="tabcontent" style="display:none; margin-top:110px;">
+        <div class="banner">
+            <div class="banner-img banner-img-video"></div>
+            <div class="cms-tab-banner-text">
+                <h1 class="banner-text-title">Videos</h1>
+                <h5>Learn how to use CMS through these demonstration videos</h5>
             </div>
+        </div>
+        <div class="container body-container">
+            <div class="video-container">
+                <div class="instructional-main-video-container main-video-container">
+                   <video src="instr-video/V0 - CMS Overview - Brian Audio.mp4" loop controls class="main-video"></video>
+                   <h5 class="main-vid-title">CMS Overview</h5>
+                </div>
+                <div class="instructional-video-list-container video-list-container">
+                    <div class="list active">
+                        <video src="instr-video/V0 - CMS Overview - Brian Audio.mp4" class="list-video"></video>
+                        <h5 class="list-title">CMS Overview</h5>
+                   </div>
+                   <div class="list">
+                        <video src="instr-video/V1 - Lunar Surface Visualization.mp4" class="list-video"></video>
+                        <h5 class="list-title">Lunar Surface Visualization</h5>
+                   </div>
+                   <div class="list">
+                        <video src="instr-video/V2 - Data Import and Export.mp4" class="list-video"></video>
+                        <h5 class="list-title">Data Import and Export</h5>
+                    </div>
+                    <div class="list">
+                        <video src="instr-video/V3 - 3D Measurement Tools.mp4" class="list-video"></video>
+                        <h5 class="list-title">3D Measurement Tools</h5>
+                    </div>
+                    <div class="list">
+                        <video src="instr-video/V4 - Sun Angle Calculation.mp4" class="list-video"></video>
+                        <h5 class="list-title">Sun Angle Calculation</h5>
+                    </div>
+                    <div class="list">
+                        <video src="instr-video/V5 - Equipment Placement and Planning.mp4" class="list-video"></video>
+                        <h5 class="list-title">Equipment Placement and Planning</h5>
+                    </div>
+                    <div class="list">
+                        <video src="instr-video/V6 - Navigation and Feature Search.mp4" class="list-video"></video>
+                        <h5 class="list-title">Navigation and Feature Search</h5>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <!-- Archived Videos Tab -->
+    <div id="archived-video" class="tabcontent" style="display:none; margin-top:110px;">
+        <div class="banner">
+            <div class="banner-img banner-img-archive"></div>
+            <div class="cms-tab-banner-text">
+                <h1 class="banner-text-title">Archived Videos</h1>
+                <h5>View our archive of video demonstrations showing the progress of CMS</h5>
+            </div>
+        </div>
+        <div class="container body-container">
+            <div class="video-container">
+                <div class="archive-main-video-container main-video-container">
+                    <video src="video/CMS_video_Part1.mp4" loop controls class="main-video"></video>
+                    <h5 class="main-vid-title">Fall 2020</h5>
+                </div>
+                <div class="archive-video-list-container video-list-container">
+                    <div class="list active">
+                        <video src="video/CMS_video_Part1.mp4" class="list-video"></video>
+                        <h5 class="list-title">Fall 2020</h5>
+                    </div>
+                    <div class="list">
+                        <video src="video/Video002c_Spr2021.mp4" class="list-video"></video>
+                        <h5 class="list-title">Spring 2021</h5>
+                    </div>
+                    <div class="list">
+                        <video src="video/CMS_Fall_2021_Presentation_v3d.mp4" class="list-video"></video>
+                        <h5 class="list-title">Fall 2021</h5>
+                    </div>
+                    <div class="list">
+                        <video src="video/Celestial Mapping System Part 4 Video Demonstration.mp4" class="list-video"></video>
+                        <h5 class="list-title">Spring 2022</h5>
+                    </div>
+                </div>
+                </div>
         </div>
     </div>
 
     <!-- Meet the Team Tab -->
     <div id="team" class="tabcontent" style="display:none; margin-top:110px;">
+        <div class="banner">
+            <div class="banner-img banner-img-team"></div>
+            <div class="cms-tab-banner-text">
+                <h1 class="banner-text-title">Meet the Team</h1>
+                <h5>Learn more about our team of NASA scientists and engineers behind CMS</h5>
+            </div>
+        </div>
         <div class="container body-container">
-            <br>
             <div class="container">
-                <h1 class="text-center">Meet the Team</h1>
-                <br>
-                <hr>
-                <h3 class="text-center"><strong>Management</strong></h3>
-                <br>
-                <div class="row justify-content-center">
-                    <div class="col-md-4">
+                <h2 class="text-left title"><strong>Management</strong></h2>
+                <div class="row row-eq-height justify-content-left">
+                    <div class="col-md-3">
                         <br>
                         <figure class="figure img-responsive center-block d-block mx-auto">
                             <img src="profile-img/parulagrawal2.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
                         </figure>
-                        <h4 class="text-center">
-                            <a href="https://www.nasa.gov/people/parul-agrawal/" class="link-dark profile-link">
-                                Dr. Parul Agrawal
-                            </a>
-                        </h4>
-                        <h5 class="text-center">Founder & Project Manager</h5>
+                        <h5 class="text-center">
+                            <a href="https://www.nasa.gov/people/parul-agrawal/" class="link-dark profile-link">Dr. Parul Agrawal</a>
+                        </h5>
+                        <h6 class="text-center">Founder & Project Manager</h6>
                         <br>
                     </div>
-                    <br class="extra-space">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <br>
                         <figure class="figure img-responsive center-block d-block mx-auto">
                             <img src="profile-img/AllisonZuniga.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Allison Zuniga's Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
                         </figure>
-                        <h4 class="text-center">Allison Zuniga</h4>
-                        <h5 class="text-center">Partnerships & Deputy PM</h5>
+                        <h5 class="text-center">Allison Zuniga</h5>
+                        <h6 class="text-center">Partnerships & Deputy Project Manager</h6>
                         <br>
                     </div>
                 </div>
                 <hr>
-                <h3 class="text-center"><strong>Software Development Team</strong></h3>
-                <br>
-                <div class="row">
+
+                <h2 class="text-left title"><strong>Software Development Team</strong></h2>
+                <div class="row row-eq-height justify-content-left">
                     <div class="col-md-3">
                         <br>
                         <figure class="figure img-responsive center-block d-block mx-auto">
                             <img src="profile-img/MarkPetersonLinkedin.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
                         </figure>
-                        <h4 class="text-center">Mark Peterson</h4>
+                        <h5 class="text-center">Mark Peterson</h5>
                         <br>
                     </div>
                     <br class="extra-space">
@@ -508,9 +444,8 @@
                         <br>
                         <figure class="figure img-responsive center-block d-block mx-auto">
                             <img src="profile-img/MiguelDelCastilloLinkedin.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
                         </figure>
-                        <h4 class="text-center">Miguel Del Castillo</h4>
+                        <h5 class="text-center">Miguel Del Castillo</h5>
                         <br>
                     </div>
                     <br class="extra-space">
@@ -518,9 +453,8 @@
                         <br>
                         <figure class="figure img-responsive center-block d-block mx-auto">
                             <img src="profile-img/GrahamMackintosh.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Graham Mackintosh's Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
                         </figure>
-                        <h4 class="text-center">Graham Mackintosh</h4>
+                        <h5 class="text-center">Graham Mackintosh</h5>
                         <br>
                     </div>
                     <br class="extra-space">
@@ -528,118 +462,125 @@
                         <br>
                         <figure class="figure img-responsive center-block d-block mx-auto">
                             <img src="profile-img/BrianMcDonald.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
                         </figure>
-                        <h4 class="text-center">Brian McDonald</h4>
+                        <h5 class="text-center">Brian McDonald</h5>
                         <br>
                     </div>
                     <br>
                 </div>
                 <hr>
-                <h3 class="text-center"><strong>HORUS Collaboration</strong></h3>
-                <br>
-                <div class="row justify-content-center">
+                <h2 class="text-left title"><strong>HORUS Collaboration</strong></h2>
+                <div class="row row-eq-height justify-content-left">
                     <div class="col-md-3">
                         <br>
                         <figure class="figure img-responsive center-block d-block mx-auto">
                             <img src="profile-img/IgnacioLopez.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
                         </figure>
-                        <h4 class="text-center">Ignacio Lopez-Francos</h4>
+                        <h5 class="text-center">Ignacio Lopez-Francos</h5>
                         <br>
                     </div>
                     <br>
                 </div>
                 <hr>
-                <h3 class="text-center"><strong>NASA Interns</strong></h3>
+                <h2 class="text-left title"><strong>Present and Past Interns</strong></h2>
                 <br>
-                <div class="row row-eq-height justify-content-center">
+                <div class="row row-eq-height justify-content-left">
                     <div class="col-md-3 text-center">
                         <figure class="figure img-responsive center-block d-block mx-auto">
-                            <img src="profile-img/kylebush.jpg" id="kd-img" class="img-responsive center-block d-block mx-auto w-100 headshots-row-2" alt="Kyle Bush's Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
+                            <img src="profile-img/kylebush.jpg" id="kd-img" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Kyle Bush's Profile Image" />
                         </figure>
-                        <h4 class="text-center give-me-less-height">Kyle Bush</h4>
+                        <h5 class="text-center give-me-less-height">Kyle Bush</h5>
                         <br>
                     </div>
                     <div class="col-md-3 text-center">
                         <figure class="figure img-responsive center-block d-block mx-auto">
-                            <img src="profile-img/JacksonCooley.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots-row-2" alt="Jackson Cooley's Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
+                            <img src="profile-img/JacksonCooley.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Jackson Cooley's Profile Image" />
                         </figure>
-                        <h4 class="text-center give-me-less-height">Jackson Cooley</h4>
+                        <h5 class="text-center give-me-less-height">Jackson Cooley</h5>
                         <br>
                     </div>
                     <div class="col-md-3">
                         <figure class="figure img-responsive center-block d-block mx-auto">
-                            <img src="profile-img/TylerChoiLinkedin.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots-row-2" alt="Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
+                            <img src="profile-img/TylerChoiLinkedin.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
                         </figure>
-                        <h4 class="text-center give-me-more-height">Tyler Choi</h4>
+                        <h5 class="text-center give-me-more-height">Tyler Choi</h5>
                         <br>
                     </div>
                     <div class="col-md-3 text-center">
                         <figure class="figure img-responsive center-block d-block mx-auto">
-                            <img src="profile-img/KaitlynDickinson.jpg" id="kd-img" class="img-responsive center-block d-block mx-auto w-100 headshots-row-2" alt="Kaitlyn Dickinson's Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
+                            <img src="profile-img/KaitlynDickinson.jpg" id="kd-img" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Kaitlyn Dickinson's Profile Image" />
                         </figure>
-                        <h4 class="text-center give-me-less-height">Kaitlyn Dickinson</h4>
+                        <h5 class="text-center give-me-less-height">Kaitlyn Dickinson</h5>
                         <br>
                     </div>
                     <div class="col-md-3 text-center">
                         <figure class="figure img-responsive center-block d-block mx-auto">
-                            <img src="profile-img/MaiaHerrington.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots-row-2" alt="Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
+                            <img src="profile-img/MaiaHerrington.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
                         </figure>
-                        <h4 class="text-center give-me-less-height">Maia Herrington</h4>
+                        <h5 class="text-center give-me-less-height">Maia Herrington</h5>
+                        <br>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <figure class="figure img-responsive center-block d-block mx-auto">
+                            <img src="profile-img/James_Hu_Profile.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
+                        </figure>
+                        <h5 class="text-center give-me-less-height">James Hu</h5>
+                        <br>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <figure class="figure img-responsive center-block d-block mx-auto ">
+                            <img src="profile-img/HariIyer.PNG" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
+                        </figure>
+                        <h5 class="text-center give-me-more-height">Hari Iyer</h5>
+                        <br>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <figure class="figure img-responsive center-block d-block mx-auto">
+                            <img src="profile-img/Navya.jpeg" id="kd-img" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Navya Kheterpal's Profile Image" />
+                        </figure>
+                        <h5 class="text-center give-me-less-height">Navya Kheterpal</h5>
                         <br>
                     </div>
                     <div class="col-md-3">
                         <figure class="figure img-responsive center-block d-block mx-auto ">
-                            <img src="profile-img/HariIyer.PNG" class="img-responsive center-block d-block mx-auto w-100 headshots-row-2" alt="Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
+                            <img src="profile-img/TylerL2021_1030.JPG" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
                         </figure>
-                        <h4 class="text-center give-me-more-height">Hari Iyer</h4>
-                        <br>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <figure class="figure img-responsive center-block d-block mx-auto">
-                            <img src="profile-img/Navya.jpeg" id="kd-img" class="img-responsive center-block d-block mx-auto w-100 headshots-row-2" alt="Navya Kheterpal's Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
-                        </figure>
-                        <h4 class="text-center give-me-less-height">Navya Kheterpal</h4>
+                        <h5 class="text-center give-me-more-height">Tyler A. Lucarz</h5>
                         <br>
                     </div>
                     <div class="col-md-3">
                         <figure class="figure img-responsive center-block d-block mx-auto ">
-                            <img src="profile-img/TylerL2021_1030.JPG" class="img-responsive center-block d-block mx-auto w-100 headshots-row-2" alt="Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
+                            <img src="profile-img/Michelle_Ly_Profile.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
                         </figure>
-                        <h4 class="text-center give-me-more-height">Tyler A. Lucarz</h4>
+                        <h5 class="text-center give-me-more-height">Michelle Ly</h5>
                         <br>
                     </div>
                     <div class="col-md-3">
                         <figure class="figure img-responsive center-block d-block mx-auto">
-                            <img id="gn-img" src="profile-img/GeoffNorman.png" class="img-responsive center-block d-block mx-auto w-100 headshots-row-2" alt="Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
+                            <img id="gn-img" src="profile-img/GeoffNorman.png" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
                         </figure>
-                        <h4 class="text-center give-me-less-height">Geoffrey Norman</h4>
+                        <h5 class="text-center give-me-less-height">Geoffrey Norman</h5>
                         <br>
                     </div>
                     <div class="col-md-3 text-center">
                         <figure class="figure img-responsive center-block d-block mx-auto">
-                            <img src="profile-img/RaghavendraRaikar.jpg" id="kd-img" class="img-responsive center-block d-block mx-auto w-100 headshots-row-2" alt="Raghavendra Raikar's Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
+                            <img src="profile-img/RaghavendraRaikar.jpg" id="kd-img" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Raghavendra Raikar's Profile Image" />
                         </figure>
-                        <h4 class="text-center give-me-less-height">Raghavendra Raikar</h4>
+                        <h5 class="text-center give-me-less-height">Raghavendra Raikar</h5>
                         <br>
                     </div>
                     <div class="col-md-3 text-center">
                         <figure class="figure img-responsive center-block d-block mx-auto">
-                            <img src="profile-img/AbhinavVishnuvajhala.jpg" id="kd-img" class="img-responsive center-block d-block mx-auto w-100 headshots-row-2" alt="Abhinav Vishnuvajhala's Profile Image" />
-                            <!-- <figcaption class="figure-caption text-center">A caption for the above image.</figcaption> -->
+                            <img src="profile-img/yeshni_headshot.jpg" id="kd-img" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Yeshni Savadatti's Profile Image" />
                         </figure>
-                        <h4 class="text-center give-me-less-height">Abhinav Vishnuvajhala</h4>
+                        <h5 class="text-center give-me-less-height">Yeshni Savadatti</h5>
+                        <br>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <figure class="figure img-responsive center-block d-block mx-auto">
+                            <img src="profile-img/AbhinavVishnuvajhala.jpg" id="kd-img" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Abhinav Vishnuvajhala's Profile Image" />
+                        </figure>
+                        <h5 class="text-center give-me-less-height">Abhinav Vishnuvajhala</h5>
                         <br>
                     </div>
                     <br>
@@ -662,83 +603,452 @@
     </div>
 
     <!-- Publications Tab -->
-    <div id="publication" class="tabcontent" style="display:none; margin-top:150px">
+    <div id="publication" class="tabcontent" style="display:none; margin-top:110px">
+        <div class="banner">
+            <div class="banner-img banner-img-publication"></div>
+            <div class="cms-tab-banner-text">
+                <h1 class="banner-text-title">Publications</h1>
+                <h5>Explore the research abstracts and posters featuring CMS</h5>
+            </div>
+        </div>
+        <br>
         <div class="container body-container">
             <div class="container">
-                <h1 class="text-center">Publications</h1>
-                <br>
-                <br>
-                <div>
-                    <h4 class="text-left"><strong>Innovative Features of NASA's Celestial Mapping System to Support Exploration in the Lunar South Pole</strong></h4>
-                    <h5 class="text-left">Presented at Lunar Surface Innovation Consortium (LSIC) 2023</h5>
-                    <h4><a href="publication/CMS_LSIC_Fall2023_abstract.pdf" target="_blank" style="margin-right: 10px">[Abstract]</a><a href="publication/Celestial Mapping System chart Rev1.pdf" target="_blank">[Poster]</a></h4>
-                    <h5 class="text-left">Parul Agrawal, M.E. Peterson, G.M. Del-Castillo, I.G. Lopez-Francos, G. Mackintosh, B. McDonald, A. Zuniga</h5>
-                    <h5 class="text-left">NASA Ames Research Center, Moffett Field CA 94035, Aug. 2023</h5>
+                <div class="publication-card card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5 class="poster-title text-center"><strong>Global 3D Data Visualization and Analysis Platform with Advanced Machine Learning Capabilities in Support of Lunar Exploration</strong></h5>
+                                <!-- <p class="text-center">Presented at Lunar and Planetary Science Conference (LPSC) 2024</p> -->
+                                <p class="text-center">
+                                    <a href="publication/LPSC_CMS_Abstract_V4.pdf" target="_blank" style="margin-right: 10px">[Abstract]</a>
+                                    <a href="publication/CMS LPSC Poster Rev1.pdf" target="_blank" style="margin-right: 10px">[Poster]</a>
+                                    <a href="https://lpsc2024.ipostersessions.com/Default.aspx?s=70-8B-BB-AC-FC-D4-B1-4F-37-33-A2-C2-AD-B9-53-7D" target="_blank">[Interactive Poster]</a>
+                                </p>
+                                <p class="text-center">Parul Agrawal, B.J. McDonald, G. Mackintosh, M.E. Peterson, I. Lopez-Francos, A. F. Zuniga, G.M. Del-Castillo</p>
+                                <div class="text-center">
+                                    Presented at Lunar and Planetary Science Conference (LPSC) 2024
+                                    NASA Ames Research Center, Moffett Field CA 94035, Mar. 2024
+                                </div>
+                                <!-- <p class="text-center">NASA Ames Research Center, Moffett Field CA 94035, Mar. 2024</p> -->
+                            </div>
+                            <div class="col-sm">
+                                <div class="text-center">
+                                    <a href="publication/CMS LPSC Poster Rev1.pdf" target="_blank">
+                                        <img class="poster" src="publication/Global_3D_Data.png" alt="Innovative Features of NASA's Celestial Mapping System to Support Exploration in the Lunar South Pole Poster">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication-card card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5 class="poster-title text-center"><strong>Innovative Features of NASA's Celestial Mapping System to Support Exploration in the Lunar South Pole</strong></h5>
+                                <!-- <p class="text-center">Presented at Lunar Surface Innovation Consortium (LSIC) 2023</p> -->
+                                <p class="text-center">
+                                    <a href="publication/CMS_LSIC_Fall2023_abstract.pdf" target="_blank" style="margin-right: 10px">[Abstract]</a>
+                                    <a href="publication/Celestial Mapping System chart Rev1.pdf" target="_blank">[Poster]</a></p>
+                                <p class="text-center">Parul Agrawal, M.E. Peterson, G.M. Del-Castillo, I.G. Lopez-Francos, G. Mackintosh, B. McDonald, A. Zuniga</p>
+                                <div class="text-center">
+                                    Presented at Lunar Surface Innovation Consortium (LSIC) 2023
+                                    NASA Ames Research Center, Moffett Field CA 94035, Aug. 2023
+                                </div>
+                                <!-- <p class="text-center">NASA Ames Research Center, Moffett Field CA 94035, Aug. 2023</p> -->
+                            </div>
+                            <div class="col-sm">
+                                <div class="text-center">
+                                    <a href="publication/Celestial Mapping System chart Rev1.pdf" target="_blank">
+                                        <img class="poster" src="publication/Innovative_Features_CMS_Poster.png" alt="Innovative Features of NASA's Celestial Mapping System to Support Exploration in the Lunar South Pole Poster">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication-card card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5 class="poster-title text-center"><strong>Lunar Science Investigations and Exploration in Celestial Mapping System</strong></h5>
+                                <!-- <p class="text-center">Presented at Lunar Surface Innovation Consortium (LSIC) 2022</p> -->
+                                <p class="text-center">
+                                    <a href="publication/CMS_abstract_v2.pdf" target="_blank" style="margin-right: 10px">[Abstract]</a>
+                                    <a href="publication/Agrawal 5007 LSSW17.pdf" target="_blank">[Poster]</a>
+                                </p>
+                                <p class="text-center">Parul Agrawal, G.K. Norman, I. Lopez-Francos, A. Zuniga, G. Mackintosh</p>
+                                <!-- <p class="text-center">NASA Ames Research Center, Moffett Field CA 94035, May 2022</p> -->
+                                <div class="text-center">
+                                    Presented at Lunar Surface Innovation Consortium (LSIC) 2022
+                                    NASA Ames Research Center, Moffett Field CA 94035, May 2022
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="text-center">
+                                    <a href="publication/Agrawal 5007 LSSW17.pdf" target="_blank">
+                                        <img class="poster" src="publication/Science_Investigation_CMS_Poster.png" alt="Lunar Science Investigations and Exploration in Celestial Mapping System Poster">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication-card card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5 class="poster-title text-center"><strong>Celestial Mapping System for Lunar Surface Mapping and Analytics</strong></h5>
+                                <!-- <p class="text-center">Presented at Lunar Surface Innovation Consortium (LSIC) 2021</p> -->
+                                <p class="text-center">
+                                    <a href="publication/Celestial Mapping System Abstract LSIC 2021.pdf" target="_blank" style="margin-right: 10px">[Abstract]</a>
+                                    <a href="publication/Celestial Mapping System Poster for LSIC 2021.pdf" target="_blank">[Poster]</a>
+                                </p>
+                                <p class="text-center">Parul Agrawal, Kaitlyn Dickinson, Mark Peterson, Miguel Del Castillo and Tyler Choi</p>
+                                <!-- <p class="text-center">NASA Ames Research Center, Moffett Field CA 94035, Feb. 2021</p> -->
+                                <div class="text-center">
+                                    Presented at Lunar Surface Innovation Consortium (LSIC) 2021
+                                    NASA Ames Research Center, Moffett Field CA 94035, Feb. 2021
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="text-center">
+                                    <a href="publication/Celestial Mapping System Poster for LSIC 2021.pdf" target="_blank">
+                                        <img class="poster" src="publication/Lunar_Surface_Mapping _CMS_Poster.png" alt="Celestial Mapping System for Lunar Surface Mapping and Analytics Poster">
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <br>
-                <div style="width: 100%; border: 1px dotted black"></div>
-                <br>
-                <div>
-                    <h4 class="text-left"><strong>Lunar Science Investigations and Exploration in Celestial Mapping System</strong></h4>
-                    <h5 class="text-left">Presented at Lunar Surface Innovation Consortium (LSIC) 2022</h5>
-                    <h4><a href="publication/CMS_abstract_v2.pdf" target="_blank" style="margin-right: 10px">[Abstract]</a><a href="publication/Agrawal 5007 LSSW17.pdf" target="_blank">[Poster]</a></h4>
-                    <h5 class="text-left">Parul Agrawal, G.K. Norman, I. Lopez-Francos, A. Zuniga, G. Mackintosh</h5>
-                    <h5 class="text-left">NASA Ames Research Center, Moffett Field CA 94035, May 2022</h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Tab -->
+    <div id="gallery" class="tabcontent" style="display:none; margin-top:115px; height:55.9%">
+        <div class="banner">
+            <div class="banner-img banner-img-gallery"></div>
+            <div class="cms-tab-banner-text">
+                <h1 class="banner-text-title">Gallery</h1>
+                <h5>Uncover various use cases with CMS through this interactive gallery</h5>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Gallery Image Modal -->
+            <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <button type="button" class="close close-btn text-right" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 id="modalCaption" class="text-center"></h5>
+                      <img id="modalImage" src="" class="img-fluid" alt="">
+                    </div>
+                  </div>
                 </div>
-                <br>
-                <div style="width: 100%; border: 1px dotted black"></div>
-                <br>
-                <div>
-                    <h4 class="text-left"><strong>Celestial Mapping System for Lunar Surface Mapping and Analytics</strong></h4>
-                    <h5 class="text-left">Presented at Lunar Surface Innovation Consortium (LSIC) 2021</h5>
-                    <h4><a href="publication/Celestial Mapping System Abstract LSIC 2021.pdf" target="_blank" style="margin-right: 10px">[Abstract]</a><a href="publication/Celestial Mapping System Poster for LSIC 2021.pdf" target="_blank">[Poster]</a></h4>
-                    <h5 class="text-left">Parul Agrawal, Kaitlyn Dickinson, Mark Peterson, Miguel Del Castillo and Tyler Choi</h5>
-                    <h5 class="text-left">NASA Ames Research Center, Moffett Field CA 94035, Feb. 2021</h5>
+            </div>
+
+            <div class="row row-eq-height justify-content-center">
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/SouthernCraters.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Southern Craters" />
+                        <figcaption class="figure-caption text-center">Southern Craters</figcaption>
+                    </figure>
                 </div>
-                <br>
-                <br>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/CLPS_Mission_Labels.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="CLPS Mission Labels" />
+                        <figcaption class="figure-caption text-center">CLPS Mission Labels</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/Measure_Tool.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Measure Tool Over Viewshed Analysis" />
+                        <figcaption class="figure-caption text-center">Measure Tool Over Viewshed Analysis</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/CLPS_Mission_Patches.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="CLPS Mission Patches" />
+                        <figcaption class="figure-caption text-center">CLPS Mission Patches</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/Apollo_14_Waypoints.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Apollo 14 Waypoints" />
+                        <figcaption class="figure-caption text-center">Apollo 14 Waypoints</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/Artemis_Candidate_Region.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Artemis Candidate Landing Regions" />
+                        <figcaption class="figure-caption text-center">Artemis Candidate Landing Regions</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/CLPS_Lunar_South.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="CLPS Missions at Lunar South Pole" />
+                        <figcaption class="figure-caption text-center">CLPS Missions at Lunar South Pole</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/Viewshed_Analysis.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Viewshed Analysis" />
+                        <figcaption class="figure-caption text-center">Viewshed Analysis</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/steel_Original.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="LOLA Color Shaded Relief" />
+                        <figcaption class="figure-caption text-center">LOLA Color Shaded Relief</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/Apollo17.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Apollo 17" />
+                        <figcaption class="figure-caption text-center">Apollo 17</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/profiler.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Terrain Profiler" />
+                        <figcaption class="figure-caption text-center">Terrain Profiler</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/TrallesCrater.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Tralles Crater" />
+                        <figcaption class="figure-caption text-center">Tralles Crater</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/ApolloMissions.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Apollo Mission Placemarks" />
+                        <figcaption class="figure-caption text-center">Apollo Mission Placemarks</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/placemarks.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Placemarks" />
+                        <figcaption class="figure-caption text-center">Placemarks</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/southpole.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="South Pole" />
+                        <figcaption class="figure-caption text-center">South Pole</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/graticule20km.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Latitude Longitude Graticule Layer" />
+                        <figcaption class="figure-caption text-center">Latitude Longitude Graticule Layer</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/moonshading.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Moonshading" />
+                        <figcaption class="figure-caption text-center">Moonshading</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/3dapollo15.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Apollo 15 Landing Site" />
+                        <figcaption class="figure-caption text-center">Apollo 15 Landing Site</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/annotations.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Annotations" />
+                        <figcaption class="figure-caption text-center">Annotations</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/UnifiedGeologicMap.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Unified Geologic Map" />
+                        <figcaption class="figure-caption text-center">Unified Geologic Map</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/TrallesCrater.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Tralles Crater" />
+                        <figcaption class="figure-caption text-center">Tralles Crater</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/Mares.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="LOLA Color Shaded Relief Map" />
+                        <figcaption class="figure-caption text-center">LOLA Color Shaded Relief Map</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/change100km.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Lunar Feature Placenames" />
+                        <figcaption class="figure-caption text-center">Lunar Feature Placenames</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/clem.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="LRO WAC Global Mosaic" />
+                        <figcaption class="figure-caption text-center">LRO WAC Global Mosaic</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/GARS.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="GARS Graticule Layer" />
+                        <figcaption class="figure-caption text-center">GARS Graticule Layer</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/sp.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="LOLA Color Shaded Relief Map" />
+                        <figcaption class="figure-caption text-center">LOLA Color Shaded Relief Map</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/stereom.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Stereoscopic View of Mountainous Crater" />
+                        <figcaption class="figure-caption text-center">Stereoscopic View of a Mountainous Crater</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/latlongrat.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Lat-Lon Graticule Conforming to Mountains" />
+                        <figcaption class="figure-caption text-center">Lat-Lon Graticule Conforming to Mountains</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/place names.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Crater Names" />
+                        <figcaption class="figure-caption text-center">Crater Names</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/cop003.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Measurement Tool" />
+                        <figcaption class="figure-caption text-center">Measurement Tool</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/moon4.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="LOLA Color Shaded Relief Map" />
+                        <figcaption class="figure-caption text-center">LOLA Color Shaded Relief Map</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/LangrenusCrater_Graticule.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Langrenus Crater" />
+                        <figcaption class="figure-caption text-center">Langrenus Crater</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/Crater_Countour_Lines.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Crater Contour Lines" />
+                        <figcaption class="figure-caption text-center">Crater Contour Lines</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/Contour_Line_Annotation.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Contour Line Annotation" />
+                        <figcaption class="figure-caption text-center">Contour Line Annotation</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/Equipment_Placement.png" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Equipment Placement" />
+                        <figcaption class="figure-caption text-center">Equipment Placement</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure class="figure img-responsive center-block d-block mx-auto"
+                        data-toggle="modal" data-target="#imageModal" onclick="showGalleryImage(this)">
+                        <img src="img/stereo2.PNG" class="img-responsive center-block d-block mx-auto w-100 gallery-img" alt="Stereoscopic View of a Mountainous Crater" />
+                        <figcaption class="figure-caption text-center">Stereoscopic View of a Mountainous Crater</figcaption>
+                    </figure>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Contact Us Tab -->
     <div id="contact" class="tabcontent" style="display:none; margin-top:115px; height:55.9%">
+        <div class="banner">
+            <div class="banner-img banner-img-contact"></div>
+            <div class="cms-tab-banner-text">
+                <h1 class="banner-text-title">Contact Us</h1>
+                <h5>Have any questions about CMS?</h5>
+            </div>
+        </div>
         <div class="card text-center">
-            <div class="card-body">
-                <h3 class="card-title">Reach out to learn more about the Celestial Mapping System</h3>
-
-                <a href="mailto:parul.agrawal-1@nasa.gov" class="btn btn-dark">
-                    <h3 id="email-us">Email Us</h3>
-                </a>                
-               
+            <div class="card-body contact-card">
+                <h5 class="card-title contact-subtitle">Reach out to our team to learn more about the Celestial Mapping System</h5>
+                <a href="mailto:parul.agrawal-1@nasa.gov" class="btn btn-secondary">
+                <h5 id="email-us">Email Us</h5>
+                </a>
             </div>
         </div>
     </div>
-    
-    <div class="wrapper banner-wrapper">
-        <div class="page-end-spacer">
-            <div class="banner end-banner">
-                <div class="row more-left-right-padding banner-logos ">
-                    <div class="cms-logo-col">
-                        <img class="cms-logo" src="img/cms-logo.png">
-                    </div>
-                    <div class="nasa-logo-col-footer">
-                        <img class="cms-logo" src="img/nasa-meatball-logo.png">
-                    </div>
-                </div>
-                <div class="text-center nasa-footer-links">
-                    <h4>
-                        <a class="link-white" href="https://www.nasa.gov/about/highlights/HP_Privacy.html">Privacy</a>
-                    </h4>
-                </div>
 
+    <footer class="wrapper banner-wrapper footer">
+        <div class="banner" style="overflow: hidden; bottom: 0; width: 100%;">
+            <div class="row banner-logos footer-items">
+                <div class="cms-logo-col">
+                    <img id=cms-main-logo src="img/cms-logo-high-res.png" alt="CMS Home Page">
+                </div>
+                <div class="tab" style="font-size: 23px;">
+                    <a class="tablinks" href="https://www.nasa.gov/about/highlights/HP_Privacy.html" target="_blank" >Privacy</a>
+                    <a class="tablinks" href="https://www.nasa.gov/accessibility/" target="_blank">Accessibility</a>
+                </div>
+                <div class="nasa-logo-col">
+                    <img id=nasa-meatball-logo src="img/nasa-meatball-logo-high-res.png" alt="NASA Home Page">
+                </div>
             </div>
         </div>
+    </footer>
 
-    </div>
-
-    <!-- Javascript for handling tab change -->
+    <!-- Javascript -->
     <script>
+        // Handling tab change
         document.getElementById("aboutButton").click();
 
         function openTab(evt, tabName) {
@@ -762,6 +1072,43 @@
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
+
+        // Handling gallery image modals
+        function showGalleryImage(element) {
+            var imageSrc = element.querySelector('img').getAttribute('src');
+            var captionText = element.querySelector('img').getAttribute('alt');
+
+            document.getElementById("modalImage").src = imageSrc;
+            document.getElementById("modalImage").alt = captionText;
+            document.getElementById("modalCaption").textContent = captionText;
+        }
+
+        // Handling video players
+        let videoList = document.querySelectorAll('.instructional-video-list-container .list');
+        videoList.forEach(vid =>{
+            vid.onclick = () =>{
+                videoList.forEach(remove =>{remove.classList.remove('active')});
+                vid.classList.add('active');
+                let src = vid.querySelector('.list-video').src;
+                let title = vid.querySelector('.list-title').innerHTML;
+                document.querySelector('.instructional-main-video-container .main-video').src = src;
+                document.querySelector('.instructional-main-video-container .main-video').play();
+                document.querySelector('.instructional-main-video-container .main-vid-title').innerHTML = title;
+            };
+        });
+
+        let archiveVideoList = document.querySelectorAll('.archive-video-list-container .list');
+        archiveVideoList.forEach(vid =>{
+            vid.onclick = () =>{
+                archiveVideoList.forEach(remove =>{remove.classList.remove('active')});
+                vid.classList.add('active');
+                let src = vid.querySelector('.list-video').src;
+                let title = vid.querySelector('.list-title').innerHTML;
+                document.querySelector('.archive-main-video-container .main-video').src = src;
+                document.querySelector('.archive-main-video-container .main-video').play();
+                document.querySelector('.archive-main-video-container .main-vid-title').innerHTML = title;
+            };
+        });
     </script>
 </body>
 

@@ -1,30 +1,35 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Lato', sans-serif;
-    min-width: 335px;
+    font-family: 'Public Sans Web', sans-serif;
+    font-style: normal;
 }
 
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
 
-/* latin-ext */
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
+h5 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
 
 @font-face {
-    font-family: 'Lato';
+    font-family: 'Public Sans Web, sans-serif';
     font-style: normal;
-    font-weight: 300;
     src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh7USSwaPGQ3q5d0N7w.woff2) format('woff2');
     unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
-
-/* latin */
-
 @font-face {
-    font-family: 'Lato';
+    font-family: 'Public Sans Web, sans-serif';
     font-style: normal;
-    font-weight: 300;
     src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
@@ -37,31 +42,46 @@ body {
     object-position: left 15%;
 }
 
-#kd-img {
-    object-position: left 30%;
-}
-
 .container {
     margin-top: 1rem;
 }
 
-.cms-banner-text {
-    /*position: absolute;*/
-    top: 9rem;
+.cms-tab-banner-text {
+    position: absolute;
     width: 100%;
-    text-align: center;
+    text-align: left;
+    padding-left: 8rem;
     color: white;
-    /*font-size: 200%;*/
+    top: 170px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+}
+
+.banner-text-title {
+    padding-bottom: 5px;
+}
+
+.cms-banner-text {
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    padding-left: 11rem;
+    color: white;
+    top: 320px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .cms-banner-text h1 {
-    font-size: 500%;
-    font-weight: bold;
+    font-size: 400%;
 }
 
 .cms-banner-text h2 {
-    font-size: 300%;
-    font-weight: normal;
+    font-size: 150%;
+    padding-left: 5px;
+    font-weight: bold;
 }
 
 .jumbotron {
@@ -69,14 +89,11 @@ body {
     background-image: url("../img/blue005.png");
     background-position-y: 80%;
     background-position-x: center;
-    /*background-repeat: no-repeat;*/
     background-size: cover;
     background-attachment: scroll;
     background-color: black;
     min-height: 375px;
     max-height: 550px;
-    /*background-attachment: local;*/
-    /*height: 55vh;*/
 }
 
 .jumbotron::after {
@@ -93,16 +110,19 @@ body {
     content: "";
 }
 
-/* .banner-logos {
-    /*margin-top: 2rem;*/
-    /*padding-top: 0px;*/
-    /*margin-left: 1rem;*/
-    /*margin-right: 1rem;*/
-    /*margin: auto;} */
-
 .tablinks{
-    font-weight: bolder;
+    font-size: 20px;
+    font-weight: 400%;
+    color: white;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
 }
+
+.tablinks:hover {
+    color: white;
+  }
 
 textarea{
     resize: horizontal;
@@ -113,16 +133,20 @@ textarea{
     min-width: 50px;
 }
 
+#cms-main-logo {
+    max-width:150px;
+}
+
 .cms-logo-col {
-    /* flex: 5%; */
-    padding: 1rem;
+    padding-left: 1rem;
+    max-width: 150px + 1rem;
+    padding-top: 1rem;
 }
 
 .row.banner-logos {
     display: flex;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .row.banner-logos::after {
@@ -131,16 +155,18 @@ textarea{
     content: "";
 }
 
-.nasa-logo-col {
-    text-align: right;
-    /* flex: 5%; */
-    padding-right: 1rem;
+#nasa-meatball-logo {
+    max-width:150px;
+    max-height: 80px;
 }
 
-.nasa-logo-col-footer {
+
+.nasa-logo-col {
     text-align: right;
-    flex: 5%;
+    max-width:150px;
     padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .tab {
@@ -151,23 +177,8 @@ textarea{
     padding-top: 2rem;
     color: white;
 }
-
-.tab button{
-    background-color: inherit;
-    border:none;
-    outline:none;
-    cursor:pointer;
-    color:white !important;
-    padding-left: 2rem;
-    padding-right:2rem;
-}
-
-.tab button:hover {
-    text-decoration: underline;
-}
   
-  /* Create an active/current tablink class */
-.tab button.active {
+.tab a.active {
     text-decoration: underline;
 }
 
@@ -182,32 +193,42 @@ textarea{
 .carousel-item img {
     width: 100%;
     height: 100%;
+    opacity: 40%;
     object-fit: cover;
 }
 
 .carousel-item {
     width: 100%;
     height: 35rem;
-    /* example */
 }
 
-.page-end-spacer {
-    /*background-image: url("../img/blue005.png");*/
-    /*background-position-y: 80%;*/
-    margin-top: auto;
-    margin-bottom: auto;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    /*background-attachment: scroll;*/
-    background-color: black;
-    min-height: 150px;
-    max-height: 250px;
+.overview-text{
+    page-break-inside: avoid;
+    padding-bottom: 10px;
+}
+
+.title {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    margin-left: -10px;
+}
+
+.contact-subtitle {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #email-us {
-    font-weight: 600;
-    letter-spacing: .1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+}
+
+.contact-card{
+    margin-bottom: 70px;
 }
 
 #banner-carousel {
@@ -219,22 +240,6 @@ textarea{
     margin: 1.75rem auto;
 }
 
-.weight-600,
-.carousel-caption h5,
-.carousel-caption p {
-    font-weight: 600;
-}
-
-.dark-caption-background {
-    background-color: #495057b5;
-    max-width: 60%;
-    padding-left: .5rem;
-    padding-right: .5rem;
-    margin: auto;
-    /*outline: #00000085;*/
-    /*outline-style: solid;*/
-}
-
 .object-position-top {
     object-position: top;
 }
@@ -242,15 +247,6 @@ textarea{
 div.row {
     margin-left: 0;
     margin-right: 0;
-}
-
-.nasa-footer-links {
-    padding-bottom: 1rem;
-    font-style: bold;
-}
-
-.nasa-footer-links h4 {
-    font-weight: bold;
 }
 
 .link-dark {
@@ -271,14 +267,172 @@ div.row {
     text-decoration: underline;
 }
 
+.headshots{
+    border-radius: 50%;
+    max-width: 250px;
+    height: auto;
+    object-fit: fill;
+    overflow: hidden;
+}
 
-/**/
+.banner-img {
+    background-position: center;
+    height: 250px;
+    background-size: cover;
+    margin-top: -2%;
+    opacity: 50%;
+}
 
+.banner-img-team {
+    background-image: url("../img/Stereo.PNG");
+}
 
-/*div.row.more-left-right-padding.banner-logos {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}*/
+.banner-img-gallery {
+    background-image: url("../img/Mares.PNG");
+}
+
+.banner-img-video {
+    background-image: url("../img/southpole.PNG");
+}
+
+.banner-img-contact {
+    background-image: url("../img/SouthernCraters.PNG");
+}
+
+.banner-img-publication {
+    background-image: url("../img/blue002.png");
+}
+
+.banner-img-archive {
+    background-image: url("../img/Crater_Countour_Lines.png");
+}
+
+.poster {
+    max-width: 450px;
+    height: auto;
+}
+
+.publication-card {
+    margin-bottom: 30px;
+    border-width: 2px;
+}
+
+.poster-title {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.gallery-img {
+    padding-bottom: 10px;
+    padding-top: 15px;
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-img:hover {
+    opacity: 0.7;
+}
+
+#modalCaption{
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+
+.close-btn{
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+#modalImage{
+    padding-bottom: 10px;
+}
+
+.video-container{
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.main-video-container{
+    flex: 1 1 700px;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.main-vid-title {
+    padding-top: 10px;
+}
+ 
+.main-video-container .main-video {
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+ 
+.video-list-container{
+    flex: 1 1 350px;
+    height: 460px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px;
+    padding: 15px;
+}
+
+.archive-video-list-container{
+    height: 400px;
+}
+ 
+.video-list-container::-webkit-scrollbar {
+    width: 10px;
+ }
+ 
+.video-list-container::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 5px;
+ }
+ 
+.video-list-container::-webkit-scrollbar-thumb {
+    background-color: #7a7878;
+    border-radius: 5px;
+ }
+ 
+.video-list-container .list{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #eeefef;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+ }
+ 
+.video-list-container .list:last-child {
+    margin-bottom: 0;
+}
+ 
+.video-list-container .list.active{
+    background-color: #0b3d91;
+ }
+ 
+.video-list-container .list.active .list-title{
+    color:#fff;
+ }
+ 
+.video-list-container .list .list-video{
+    width: 100px;
+    border-radius: 5px;
+ }
+ 
+.video-list-container .list .list-title{
+    font-size: 16px;
+ }
 
 @media all and (max-width: 576px) {
     .body-container {
@@ -291,7 +445,26 @@ div.row {
     .carousel-item {
         width: 100%;
         height: 25rem;
-        /* example */
+    }
+
+    .cms-banner-text h1 {
+        font-size: 220%;
+    }
+    
+    .cms-banner-text h2 {
+        font-size: 120%;
+    }
+
+    .cms-banner-text {
+        position: absolute;
+        width: 100%;
+        text-align: left;
+        padding-left: 7rem;
+        color: white;
+        top: 250px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
     }
 }
 
@@ -312,15 +485,16 @@ div.row {
         object-fit: cover;
         object-position: center top;
     }
+
     .carousel-item img {
-        /*width: 100%;*/
-        /*max-height: 550px;*/
         height: 35rem;
         object-fit: cover;
     }
+
     .give-me-more-height {
         margin-bottom: 1.5rem;
     }
+
     .body-container {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -332,5 +506,26 @@ div.row {
         height: 247.50px;
         object-fit: cover;
         object-position: center top;
+    }
+}
+ 
+@media (max-width: 450px){
+    .main-video-container .main-vid-title{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .video-list-container .list{
+        flex-flow: column;
+        gap:10px;
+    }
+
+    .video-list-container .list .list-video{
+        width: 100%;
+    }
+
+    .video-list-container .list .list-title{
+        font-size: 15px;
+        text-align: center;
     }
 }
