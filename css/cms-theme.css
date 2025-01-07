@@ -295,6 +295,10 @@ div.row {
     background-image: url("../img/southpole.PNG");
 }
 
+.banner-img-short {
+    background-image: url("../img/Equipment_Placement.PNG");
+}
+
 .banner-img-contact {
     background-image: url("../img/SouthernCraters.PNG");
 }

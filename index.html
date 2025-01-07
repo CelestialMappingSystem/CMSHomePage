@@ -29,7 +29,8 @@
 				</div>
                 <div class="tab" style="font-size: 25px;">
                     <a id="aboutButton" class="tablinks" onclick="openTab(event,'about')">Home</a>
-                    <a class="tablinks" onclick="openTab(event,'instructional-video')">Videos</a>
+                    <a class="tablinks" onclick="openTab(event,'short-video')">Quick Videos</a>
+                    <a class="tablinks" onclick="openTab(event,'instructional-video')">Instructional Videos</a>
                     <a class="tablinks" onclick="openTab(event,'team')">Team</a>
                     <a class="tablinks" onclick="openTab(event,'publication')">Publications</a>
                     <a class="tablinks" onclick="openTab(event,'gallery')">Gallery</a>
@@ -356,6 +357,47 @@
         </div>
     </div>
 
+    <!-- Quick Learn Videos Tab -->
+    <div id="short-video" class="tabcontent" style="display:none; margin-top:110px;">
+        <div class="banner">
+            <div class="banner-img banner-img-short"></div>
+            <div class="cms-tab-banner-text">
+                <h1 class="banner-text-title">Quick Learn Videos</h1>
+                <h5>Learn how to use important CMS tools through these short instructional videos</h5>
+            </div>
+        </div>
+        <div class="container body-container">
+            <div class="video-container">
+                <div class="short-main-video-container main-video-container">
+                    <video src="short-video/s01-Equipment-Placement.mp4" loop controls class="main-video"></video>
+                    <h5 class="main-vid-title">Equipment Placement</h5>
+                </div>
+                <div class="short-video-list-container video-list-container">
+                    <div class="list active">
+                        <video src="short-/s01-Equipment-Placement.mp4" class="list-video"></video>
+                        <h5 class="list-title">Equipment Placement</h5>
+                    </div>
+                    <div class="list">
+                        <video src="short-/s02-Viewshed-Analysis.mp4" class="list-video"></video>
+                        <h5 class="list-title">Viewshed Analysis</h5>
+                    </div>
+                    <div class="list">
+                        <video src="short-/s03-3D-Measurements.mp4" class="list-video"></video>
+                        <h5 class="list-title">3D Measurements</h5>
+                    </div>
+                    <div class="list">
+                        <video src="short-/s04-Data-Import.mp4" class="list-video"></video>
+                        <h5 class="list-title">Data Import</h5>
+                    </div>
+                    <div class="list">
+                        <video src="short-/s05-Moon-Shading.mp4" class="list-video"></video>
+                        <h5 class="list-title">Moon Shading</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	
     <!-- Archived Videos Tab -->
     <div id="archived-video" class="tabcontent" style="display:none; margin-top:110px;">
         <div class="banner">
@@ -518,6 +560,13 @@
                             <img src="profile-img/MaiaHerrington.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
                         </figure>
                         <h5 class="text-center give-me-less-height">Maia Herrington</h5>
+                        <br>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <figure class="figure img-responsive center-block d-block mx-auto">
+                            <img src="profile-img/KevinHsu.jpg" class="img-responsive center-block d-block mx-auto w-100 headshots" alt="Profile Image" />
+                        </figure>
+                        <h5 class="text-center give-me-less-height">Kevin Hsu</h5>
                         <br>
                     </div>
                     <div class="col-md-3 text-center">
@@ -1094,6 +1143,19 @@
                 document.querySelector('.instructional-main-video-container .main-video').src = src;
                 document.querySelector('.instructional-main-video-container .main-video').play();
                 document.querySelector('.instructional-main-video-container .main-vid-title').innerHTML = title;
+            };
+        });
+
+        let shortVideoList = document.querySelectorAll('.short-video-list-container .list');
+        shortVideoList.forEach(vid =>{
+            vid.onclick = () =>{
+                shortVideoList.forEach(remove =>{remove.classList.remove('active')});
+                vid.classList.add('active');
+                let src = vid.querySelector('.list-video').src;
+                let title = vid.querySelector('.list-title').innerHTML;
+                document.querySelector('.short-main-video-container .main-video').src = src;
+                document.querySelector('.short-main-video-container .main-video').play();
+                document.querySelector('.short-main-video-container .main-vid-title').innerHTML = title;
             };
         });
 
